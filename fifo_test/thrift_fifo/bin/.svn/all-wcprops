@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/search/!svn/ver/3703/code/public/thrift_fifo/bin
+END
+start.sh
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/search/!svn/ver/3703/code/public/thrift_fifo/bin/start.sh
+END
+stop.sh
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/search/!svn/ver/3703/code/public/thrift_fifo/bin/stop.sh
+END

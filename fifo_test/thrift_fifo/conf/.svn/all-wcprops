@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/search/!svn/ver/3251/code/public/thrift_fifo/conf
+END
+log4cxx_getter.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/search/!svn/ver/2222/code/public/thrift_fifo/conf/log4cxx_getter.cfg
+END
+thrift_fifo.conf
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/search/!svn/ver/3251/code/public/thrift_fifo/conf/thrift_fifo.conf
+END
+log4cxx_thrift_fifo.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/search/!svn/ver/2394/code/public/thrift_fifo/conf/log4cxx_thrift_fifo.cfg
+END
+getter.conf
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/search/!svn/ver/3251/code/public/thrift_fifo/conf/getter.conf
+END

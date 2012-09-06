@@ -1,0 +1,9 @@
+{
+	"thrift_port"		:	12344,
+	"thrift_worker_count"	: 	6,
+	"output_address"	:	"localhost:12345",
+	"output_worker_count"	:	5,
+	"disk_limit"		:	10000000000,
+	"per_filesize"		: 	1000000000,
+	"max_mem_elements"	: 	1000
+}

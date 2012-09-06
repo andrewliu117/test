@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/sse/!svn/ver/2366/spider/trunk/feed/src/proxy
+END
+ttypes.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/sse/!svn/ver/1941/spider/trunk/feed/src/proxy/ttypes.py
+END
+feed_proxy_server.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/sse/!svn/ver/2366/spider/trunk/feed/src/proxy/feed_proxy_server.py
+END
+feed.thrift
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/sse/!svn/ver/1941/spider/trunk/feed/src/proxy/feed.thrift
+END
+constants.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/sse/!svn/ver/1847/spider/trunk/feed/src/proxy/constants.py
+END
+start_proxy.sh
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/sse/!svn/ver/2319/spider/trunk/feed/src/proxy/start_proxy.sh
+END
+feed_proxy_client.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/sse/!svn/ver/2366/spider/trunk/feed/src/proxy/feed_proxy_client.py
+END
+feed.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/sse/!svn/ver/1941/spider/trunk/feed/src/proxy/feed.py
+END
