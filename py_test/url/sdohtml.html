@@ -1,0 +1,697 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>
+
+盛大通行证注册 – 盛大网络
+</title>
+<meta name="description" content="注册盛大通行证，一号轻松畅游网络，体验精彩娱乐"/>
+<meta name="keywords" content="盛大网络,盛大在线,网络游戏,游戏,盛大通行证,通行证,账号,个性账号,手机账号,邮箱账号,注册,盛大点券,点券,SDNA,SD,SDO,SDG,免费,平台,传奇世界,永恒之塔,龙之谷,传奇,泡泡堂,彩虹岛"/>
+    
+	<link type="text/css" href="/gaea-resources/style/common.css?20120705" rel="stylesheet" />
+	<link type="text/css" href="/gaea-resources/style/base.css?20120705" rel="stylesheet" />
+    <style type="text/css">
+    .promoterInput{color:#999999;border:none; background:none; height:20px; padding:8px 3px;*padding:7px 3px 10px;  line-height:20px; width:100%;font-size:12px;}
+    </style>
+    
+
+<script type="text/javascript" src="/gaea-resources/js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="js/ui.js?20120705"></script>
+<script type="text/javascript" src="js/common.js?20120705"></script>
+<script type="text/javascript">
+  document.domain = "sdo.com";
+</script>
+    
+
+
+<script type="text/javascript" src="/gaea-resources/js/popcalendar_utf8.js?20120705"></script>
+<script type="text/javascript" src="js/common-input.js?20120705"></script>
+<script type="text/javascript" src="js/pwdstrength.js?20120705"></script>
+<script type="text/javascript">
+  var hasFocus = false;
+  var hasFlashing = false;
+  var hasErrorOccur = false;
+  var resourcesRoot = '/gaea-resources';
+  var tipPasswordStrengthLevel1 = '<b>安全级别：<img src="/gaea-resources/images/RuoPas.jpg" align="absmiddle" /></b>';
+  var tipPasswordStrengthLevel2 = '<b>安全级别：<img src="/gaea-resources/images/MidPas.jpg" align="absmiddle" /></b>';
+  var tipPasswordStrengthLevel3 = '<b>安全级别：<img src="/gaea-resources/images/QiaPas.jpg" align="absmiddle" /></b>';
+  var warn_captcha_empty = '请输入验证图片上的字符';
+  var warn_captcha_invalid = '请正确输入验证码';
+  var gvNeedNameIdCard =false;
+  var gvLarsCheckAccountTypesUrl = 'http://authleqr.sdo.com/lars/check-account-types.jsonp';
+  var gvLarsSendLoginValidateCodeUrl = 'http://authleqr.sdo.com/lars/send-login-validate-code.jsonp';
+  var gvLarsLoginByValidateCodeUrl = 'http://authleqr.sdo.com/lars/login-by-validate-code.jsonp';
+  var gvLarsModifyPwdUrl = 'http://authleqr.sdo.com/lars/modify-pwd.jsonp';
+  var tip_mobile_invalid = "请输入您的真实手机号码";
+  var gvPhoneFocusEnterInfo='请填写您的<font color=red>真实</font>手机号码<br/>该手机号码即是您的登录账号';
+  var gvPhoneErrorInfo = '请输入正确格式的手机号码。我们目前支持以下号段：130-139、145、147、150-153、155-159、180、182、183、185-189';
+  var gvPhoneSpNoRegExpress = new Array();
+  
+  gvPhoneSpNoRegExpress[/^13[4-9]\d{8}$/] = "106575160882";
+  
+  gvPhoneSpNoRegExpress[/^15[012789]\d{8}$/] = "106575160882";
+  
+  gvPhoneSpNoRegExpress[/^18[2378]\d{8}$/] = "106575160882";
+  
+  gvPhoneSpNoRegExpress[/^147\d{8}$/] = "106575160882";
+  
+  gvPhoneSpNoRegExpress[/^13[0-2]\d{8}$/] = "1065502180988";
+  
+  gvPhoneSpNoRegExpress[/^145\d{8}$/] = "1065502180988";
+  
+  gvPhoneSpNoRegExpress[/^15[5-6]\d{8}$/] = "1065502180988";
+  
+  gvPhoneSpNoRegExpress[/^18[5-6]\d{8}$/] = "1065502180988";
+  
+  gvPhoneSpNoRegExpress[/^153\d{8}$/] = "10690882";
+  
+  gvPhoneSpNoRegExpress[/^133\d{8}$/] = "10690882";
+  
+  gvPhoneSpNoRegExpress[/^18[09]\d{8}$/] = "10690882";
+  
+  var gvPhoneRegExpress = new Array();
+  
+  gvPhoneRegExpress.push(/^13[0-9]\d{8}$/);
+  
+  gvPhoneRegExpress.push(/^15[012356789]\d{8}$/);
+  
+  gvPhoneRegExpress.push(/^18[02356789]\d{8}$/);
+  
+  gvPhoneRegExpress.push(/^14[57]\d{8}$/);
+  
+  var tipPasswordInvalid = '密码由6-10位数字和字母组成';
+  var lvPwdStrenth = new PasswordStrength();
+  lvPwdStrenth.setMinLen(6);
+  lvPwdStrenth.setMaxLen(10);
+  
+	var gvEnableLongPwd=false;
+	var gvPwdMaxLength=10;
+	var gvPwdFocusInfo="";
+	var gvExceedMaxLengthInfo="";
+	var gvTooShortLengthInfo="";
+
+  var tip_password_part_of_account = '请不要将账号的一部分作为密码';
+  var tip_password_repeat_figure = '请不要将连续或重复的数字作为密码';
+  var tip_password_repeat_letter = '请不要以连续或重复的字母作为密码';
+</script>
+    <script id="scriptXmlHttp" name="scriptXmlHttp" type="text/javascript"></script>
+    <script type="text/javascript" src="js/input_pt.js?20120705"></script>
+    <script type="text/javascript" src="js/formcheck.js?20120705"></script>
+    <script type="text/javascript" src="js/inputinfo.js?20120705"></script>
+    <script type="text/javascript" src="js/IdGBT2260.js?20120705"></script>
+    <script type="text/javascript" src="js/hideShow.js?20120705"></script>
+    <script type="text/javascript" src="js/fixAcctMenu.js?20120705"></script>
+
+    
+    <script type="text/javascript">
+        var queryString = location.search;
+        var gvPhoneRegTypePage="phone_default.aspx";
+        var gvANQUANImgUrl="http://captcha.sdo.com/fcgi-bin/show_img.fcgi?appid=112&gameid=212&areaid=0&session_key=X0hM5CHoE7FPz52p&image_type=0";
+
+        var gvPTFocusExtTips="";        
+        var gvRegFrom="212";
+        var gvRegZone="0";
+        
+        var gvAllowRegNameEx=false;
+        var gvEmailRegType="";
+        var gvMobilePTRegControl="";
+        var gvNeedEmailRequired=false;
+
+        var gvAllowedSuffix=new Array();
+        
+
+        
+        
+	var gvNickNameIsRequired=false;
+	var gvNickNameSexIsRequired=false;
+	var gvNickCheckErrorInfos=new Array();
+	var gvNickCheckErrorIds=new Array();
+	var gvNickFocusInfo="";
+	var gvNickEmptyInfo="";
+
+        
+        startCalendar_popcal4js('/gaea-resources/images/');
+
+        function showValidateCode() {
+          if (gvANQUANImgUrl)
+            document.getElementById("numimg").src = gvANQUANImgUrl + "&rand=" + Math.random();
+        }
+
+        function hasClass(pvElement, pvClassName)
+        { 
+            var lvRegExp = new RegExp('(\\s|^)'+pvClassName+'(\\s|$)'); 
+            return pvElement.className.match(lvRegExp); 
+        } 
+        function addClass(pvElement, pvClassName)
+        { 
+            if (!this.hasClass(pvElement, pvClassName)) 
+            { 
+                pvElement.className += " "+pvClassName; 
+            } 
+        } 
+
+	    function InputOnlyOnce()
+	    { 
+	        this.OnlyA=true; 
+	        this.OnlyD=true;
+	        this.OnlyE=true;
+	        this.OnlyF=true;
+	        this.OnlyG=true;
+	        this.OnlyH=true;
+	        this.OnlyI=true;
+	        this.OnlyJ=true;
+	        this.OnlyK=true;
+	        this.OnlyL=true;
+	        this.OnlyM=true;
+	        this.OnlyQ=true;
+	        this.OnlyR=true;
+	        this.OnlyS=true;
+	    }
+	    var lvInputOnlyOnce=new InputOnlyOnce();
+	    
+	    //个性帐号框输入
+	    function Log_A() 
+	    {
+	        if(lvInputOnlyOnce.OnlyA)
+	        {
+	            lvInputOnlyOnce.OnlyA=false;
+	            RecordIpicStaticSdo("action=PTAccountInput");
+	        }
+	    }
+	    //设置密码
+	    function Log_D()
+	    {
+	        if(lvInputOnlyOnce.OnlyD)
+	        {
+	            lvInputOnlyOnce.OnlyD=false;
+	            RecordIpicStaticSdo("action=PasswordInput");
+	        }
+	    }   
+	    //姓 名
+	    function Log_E()
+	    {
+	        if(lvInputOnlyOnce.OnlyE)
+	        {
+	            lvInputOnlyOnce.OnlyE=false;
+	            RecordIpicStaticSdo("action=UserNameInput");
+	        }
+	    }
+	    //身份证号码
+	    function Log_F()
+	    {
+	        if(lvInputOnlyOnce.OnlyF)
+	        {
+	            lvInputOnlyOnce.OnlyF=false;
+	            RecordIpicStaticSdo("action=UserIdcardInput");
+	        }
+	    }
+	    //邮 箱
+	    function Log_G()
+	    {
+	        if(lvInputOnlyOnce.OnlyG)
+	        {   
+	            lvInputOnlyOnce.OnlyG=false;
+	            RecordIpicStaticSdo("action=EmailInput");
+	        }
+	    }
+	    //生 日
+	    function Log_H()
+	    {
+	        if(lvInputOnlyOnce.OnlyH)
+	        {
+	            lvInputOnlyOnce.OnlyH=false;
+	            RecordIpicStaticSdo("action=BirthdayInput");
+	        }
+	    }
+	    //电 话
+	    function Log_I()
+	    {
+	        if(lvInputOnlyOnce.OnlyI)
+	        {
+	            lvInputOnlyOnce.OnlyI=false;
+	            RecordIpicStaticSdo("action=TelphoneInput");
+	        }
+	    }
+	    //密码保护问题一
+	    function Log_J()
+	    {
+	        if(lvInputOnlyOnce.OnlyJ)
+	        {
+	            lvInputOnlyOnce.OnlyJ=false;
+	            RecordIpicStaticSdo("action=Question1Input");
+	        }
+	    }
+	    //答案一
+	    function Log_K()
+	    {
+	        if(lvInputOnlyOnce.OnlyK)
+	        {
+	            lvInputOnlyOnce.OnlyK=false;
+	            RecordIpicStaticSdo("action=Answer1Input");
+	        }
+	    }
+	    //密码保护问题二
+	    function Log_L()
+	    {
+	        if(lvInputOnlyOnce.OnlyL)
+	        {
+	            lvInputOnlyOnce.OnlyL=false;
+	            RecordIpicStaticSdo("action=Question2Input");
+	        }
+	    }
+	    //答案二
+	    function Log_M()
+	    {
+	        if(lvInputOnlyOnce.OnlyM)
+	        {
+	            lvInputOnlyOnce.OnlyM=false;
+	            RecordIpicStaticSdo("action=Answer2Input");
+	        }
+	    }
+
+	    //手机
+	    function Log_Q()
+	    {
+	        if(lvInputOnlyOnce.OnlyQ)
+	        {
+	            lvInputOnlyOnce.OnlyQ=false;
+	            RecordIpicStaticSdo("action=PhoneInput");
+	        }
+	    }
+	    //推荐人账号                
+	    function Log_R()
+	    {
+	        if(lvInputOnlyOnce.OnlyR)
+	        {
+	            lvInputOnlyOnce.OnlyR=false;
+	            RecordIpicStaticSdo("action=PromoterInput");
+	        }
+	    }
+	    //验证码
+	    function Log_S()
+	    {
+	        if(lvInputOnlyOnce.OnlyS)
+	        {
+	            lvInputOnlyOnce.OnlyS=false;
+	            RecordIpicStaticSdo("action=VerifyCodeInput");
+	        }
+	    }
+	    //防止 session 超时
+	    function Refresh4Session()
+	    {
+	        document.getElementById("frmSessionRefresh").src="blank.aspx?rnd="+Math.random();    
+	        setTimeout(Refresh4Session,19*60*1000);
+	    }
+
+        $(document).ready(function() {
+          RegBindEvent(window, "resize", function(e) {
+            RegResizeHandler();
+          });
+          RegBindEvent(window, "scroll", function(e) {
+            RegResizeHandler();
+          });
+        });
+    </script>
+
+<style type="text/css" >
+#gethelp{ position:absolute; right:20px; width:214px; height:97px; bottom:0; display:none;  background:url("/gaea-resources/images/customer.png") no-repeat; }
+#gethelpclose{ display:block; width:26px; height:21px; top:0; left:178px; position:relative;}
+#gethelper{ display:block; width:100px; height:40px; top:34px; left:100px; position:relative;}
+#gethelpclose label, #gethelper label{ display:block; width:100%; height:100%; cursor:pointer; }
+</style>
+
+</head>
+<body>
+    <script type="text/javascript" src="http://ipic.staticsdo.com/external/install_beacon.js"></script>
+
+<div id="sdo_top" style="z-index: 999">
+  <div id="sdo_top_wrap">
+    <iframe name="sdo_top" width="100%" style="margin: 0 auto;" height="36" scrolling="no" frameborder="0" id="iTop" src="http://www.sdo.com/home/top_new.asp"></iframe>
+  </div>
+</div>
+<script>snyu_ads_slot_id = '200490'</script>
+<script src="http://pic.snyu.com/sdk/js/a.js" charset="utf-8"></script>
+    <form id="userinfo" name="userinfo" action="/gaea/input_pt.aspx?from=212" method="post" autocomplete="off">
+        <input type="hidden" id="ptType" name="ptType" value="0" />
+        <input type="hidden" id="regsdid" name="regsdid" value="" />
+        <input type="hidden" id="chksdid" name="chksdid" value="false" />
+        <input type="hidden" id="hidRecName001" name="hidRecName001" value="" />
+        <input type="hidden" id="hidRecName002" name="hidRecName002" value="" />
+        <input type="hidden" id="hidRecRule001" name="hidRecRule001" value="" />
+        <input type="hidden" id="hidRecRule002" name="hidRecRule002" value="" />
+        <input type="hidden" id="agent4IpCheck" name="agent4IpCheck" value="checkIp" />
+          
+        <input id="txtRegisterFrom" name="txtRegisterFrom" type="hidden" value="212"/>
+        <input id="txtRegisterZone" name="txtRegisterZone" type="hidden" value="0"/>
+        <input id="sessionid" name="sessionid" type="hidden" value=""/>
+        <input id="goldtype" name="goldtype" type="hidden" value=""/>
+        <input id="partner" name="partner" type="hidden" value=""/>
+        <input id="apptype" name="apptype" type="hidden" value=""/>
+        <input id="agent" name="agent" type="hidden" value=""/>
+        <input id="ctype" name="ctype" type="hidden" value=""/>
+        <input id="hidExinfo" name="hidExinfo" type="hidden" value=""/>
+        <input id="qqaccount" name="qqaccount" type="hidden" value=""/>
+        <input type="hidden" id="showPTInfoSection" name="showPTInfoSection" value="" />
+    
+	    <div class="layout">
+            <div class="logo"><a href="http://www.sdo.com" target="_blank"><img src="/gaea-resources/images/logo.gif?20120705" /></a></div>
+       	    <div class="warp">
+            
+
+
+<div class="boxt">
+  <div id="cell_tab_login_methods_v2" class="cell_tab_login_methods_v2">
+    <div class="pass">盛大通行证</div>
+    <ul>
+      <li class="accout_cell" style="display:;">
+        <a href="phone_default.aspx?from=212" id="Phone_ctlm_v2">手机账号</a>
+      </li>
+      <li class="accout_mail" style="display:;">
+        <a href="input_mail.aspx?from=212" id="Email_ctlm_v2">邮箱账号</a>
+      </li>
+      <li class="accout_figure" style="display:;">
+        <a href="input_pt.aspx?from=212" id="Pt_ctlm_v2" class="cur">个性账号</a>
+      </li>
+    </ul>
+  </div>
+  <div class="cell_tab_login_methods_v2_2">
+    <div class="figure">
+       
+       
+    </div>
+  </div>
+</div>
+                <div class="box">
+                	<div class="boxR">
+                    	<div class="phoneBox">
+                            <div class="phoneMod">
+                                
+
+
+<div class="cell_navtab">
+    <ul>
+      <li class="accout_mb">
+        <a href="phone_default.aspx?from=212" id="Phone_tab">手机账号</a>
+      </li>
+      <li class="accout_mail">
+        <a href="input_mail.aspx?from=212" id="Email_tab">邮箱账号</a>
+      </li>
+      <li class="accout_figure">
+        <a href="input_pt.aspx?from=212" id="Pt_tab" class="cur">个性账号</a>
+      </li>
+    </ul>
+</div>
+                                 <h2 class="title_v2">
+                                    <span class="h_title_pt">
+                                    </span>
+                                </h2>
+                            </div>
+                            <div class="regist" style="padding:0 35px;">
+                                <table width="100%" >
+                                    <tr>
+                                        <th width="19%">通行证账号：</th>
+                                        <td width="34%"><img src="/gaea-resources/images/b.gif" class="iconNotice" /><span class="inputBox" id="name_input"><cite><input type="text" class="text" name="username" id="username" onkeydown="setTimeout(Log_A,1500);" placeholder="由4-16位字符组成，首位为字母" /></cite></span></td>
+                                        <td width="47%" id="tdPTUserName"><div class="re"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <th>设置密码：</th>
+                                        <td><img src="/gaea-resources/images/b.gif" class="iconNotice" /><span class="inputBox" id="pass_input"><cite><input type="password" class="text" id="password" name="password" maxlength="11" onkeydown="setTimeout(Log_D,1500);" placeholder="由6-10位数字/字母组成" /></cite></span></td>
+                                        <td id="tdPassword"></td>
+                                    </tr>
+                                    <tr style="display:none">
+                                        <th></th>
+                                        <td><img src="/gaea-resources/images/b.gif" class="iconNotice" /><span class="inputBox" id="nickname_input"><cite><input type="text" class="text" id="nickname" name="nickname"  onfocus="NickNameFocus();" onblur="NickNameBlur();"/></cite></span></td>
+                                        <td id="tdNickName"></td>
+                                    </tr>
+                                    <tr style="display:none">
+                                        <th>性    别：</th>
+                                        <td><img src="/gaea-resources/images/b.gif" class="iconNotice" />&nbsp;<select name="nick_sex" id="nick_sex"><option value="">请选择</option><option value="0">女</option><option value="1">男</option></select></td>
+                                        <td id="tdNickSex"></td>
+                                    </tr>
+                                     <tr id="recomShow" >
+                                        <th>推荐人账号：</th>
+                                        <td><img src="/gaea-resources/images/b.gif" class="iconNone"/><span class="inputBox" id="recom_input"><cite><input type="text" class="promoterInput" id="PromoterID" name="PromoterID" onfocus="PT_PromoterFocus();" onblur="PT_PromoterBlur();" onkeydown="setTimeout(Log_R,1500);" value="没有可不填" /></cite></span></td>
+                                        <td id="tdPTPromoter"></td>
+                                    </tr>
+                                    <tr id="RegFCMShowSection" class="RegFCMShowSectionControl">
+  <td colspan="3">
+    <div class="fcm">
+      <div id="divFCMSection" class="fcm_tips" style="display:none;">
+        <img src="/gaea-resources/images/icon_close.png" class="close" alt=""
+             onclick="$('#divFCMSection').hide();"/>
+
+        <p class="acc_tips_p1">
+          根据《网络游戏管理暂行办法》，网络游戏用户需使用有效身份证件进行实名注册。为保证流畅游戏体验，享受健康游戏生活，请广大盛大通行证用户尽快实名注册。<br><br>
+          保护未成年人身心健康，未满18岁的用户将受到防沉迷系统的限制，游戏过程，会提示您的累计在线时间：<br>
+          累计游戏时间超过3小时，游戏收益（经验，金钱）减半。<br>累计游戏时间超过5小时，游戏收益为0。</p>
+      </div>
+      <p class="h_splitter">
+        实名注册（包括<a href="#" onclick="$('#divFCMSection').show();return false;">未成年人防沉迷验证</a>）
+      </p>
+    </div>
+  </td>
+</tr>
+                                    <tr id="RegNameShow" class="RegNameShowControl">
+                                        <th>姓    名：</th>
+                                        <td><img src="/gaea-resources/images/b.gif" class="iconNone"/><span class="inputBox" id="name_zs_input"><cite><input type="text" class="text" id="realname" name="realname" onkeydown="setTimeout(Log_E,1500);" placeholder="由2-5位汉字组成" /></cite></span></td>
+                                        <td id="tdRealName">&nbsp;</td>
+                                    </tr>
+                                    <tr id="RegIdCardShow" class="RegIDcardShowControl">
+                                        <th>身份证号码：</th>
+                                        <td><img src="/gaea-resources/images/b.gif" class="iconNone"/><span class="inputBox" id="nunber_input"><cite><input type="text" class="text" id="idcard" name="idcard" onkeydown="setTimeout(Log_F,1500);" placeholder="请填写您的15或18位身份证号码" /></cite></span></td>
+                                        <td id="tdIdCard">&nbsp;</td>
+                                    </tr>
+                                    <tr id="RegEmailShow" class="RegEmailShowControl">
+                                        <th width="19%">邮 箱：</th>
+                                        <td ><img src="/gaea-resources/images/b.gif" class="iconNone"/><span class="inputBox" id="mail_input"><cite><input type="text" class="text" id="PTUserEmailId" name="PTUserEmailId" onkeydown="setTimeout(Log_G,1500);" placeholder="请填写您的邮箱地址" /></cite></span></td>
+                                        <td id="tdPTUserEmail"></td>
+                                    </tr>
+
+                                </table>
+                                
+
+
+<div class="txt5 hide" id="moreShow" style="margin:10px 0;">
+    <img src="/gaea-resources/images/b.gif" class="iconLock" />
+    <span class="iconText" onclick="hideShow();">设置密码保护资料<img src="/gaea-resources/images/b.gif" class="iconArrow" id="hideIcon"/></span>
+    
+</div>
+<div class="regist details" id="dvPTInfoSection">
+    <table width="100%">
+        
+            <tr id="phoneShow">
+                <th>手    机：</th>
+                <td><img src="/gaea-resources/images/b.gif" class="iconNone"/><span class="inputBox" id="phone_input"><cite><input type="text" class="text" id="mobile" name="mobile" maxlength="11" onkeydown="MobileKeyDownCheck('mobile',event);setTimeout(Log_Q,1500);" onfocus="PT_UserPhoneFocus();" /></cite></span></td>
+                <td id="tdPTUserPhone"></td>
+            </tr>
+        
+        <tr>
+            <th width="19%">生    日：</th>
+            <td width="34%"><img src="/gaea-resources/images/b.gif" class="iconNone"/><span class="inputBox" id="birth_input"><cite><input type="text" class="text" id="birthday" name="birthday" maxlength="10" onclick="showCalendar_popcal4js(this, this, 'yyyy-mm-dd','cn',1,-1,-1,1,0,1);" onfocus="PT_BirthdayFocus();" onblur="PT_BirthdayBlur();" onkeydown="setTimeout(Log_H,1500);" onchange="setTimeout(Log_H,1500);" /></cite></span></td>
+            <td width="47%" id="tdBirthday">&nbsp;</td>
+        </tr>
+        <tr>
+            <th>电    话：</th>
+            <td><img src="/gaea-resources/images/b.gif" class="iconNone"/><span class="inputBox" id="telephone_input"><cite><input type="text" class="text" id="phone" name="phone" onkeydown="setTimeout(Log_I,1500);" onfocus="PT_PhoneFocus();" onblur="PT_PhoneBlur();" /></cite></span></td>
+            <td id="tdPhone">&nbsp;</td>
+        </tr>
+        
+        <tr id="pwdProtectQuestion">
+            <th>密码保护问题一：</th>
+            <td><img src="/gaea-resources/images/b.gif" class="iconNone"/>
+                <select name="question1" id="question1" onchange="setTimeout(Log_J,1500);">
+                    <option value="">请选择</option>
+                    <option value="我的小学名字？">我的小学名字？</option>
+                    <option value="我妈妈的生日？">我妈妈的生日？</option>
+                    <option value="我最难忘的日子？">我最难忘的日子？</option>
+                    <option value="我的学号(或工号)是？">我的学号(或工号)是？</option>
+                    <option value="我配偶的姓名是？">我配偶的姓名是？</option>
+                    <option value="我最喜欢的休闲运动是什么？">我最喜欢的休闲运动是什么？</option>
+                    <option value="我最喜欢的歌曲？">我最喜欢的歌曲？</option>
+                    <option value="我最喜爱的电影？">我最喜爱的电影？</option>
+                </select>
+             </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <th>你的答案：</th>
+            <td><img src="/gaea-resources/images/b.gif" class="iconNone"/><span class="inputBox" id="answer_input"><cite><input type="text" class="text" id="answer1" name="answer1" onkeydown="setTimeout(Log_K,1500);" onfocus="PT_Answer1Focus();" onblur="PT_Answer1Blur();" onchange="PT_Answer1Blur();"/></cite></span></td>
+            <td id="tdAnswer1">&nbsp;</td>
+        </tr>
+        <tr>
+            <th>密码保护问题二：</th>
+            <td><img src="/gaea-resources/images/b.gif" class="iconNone"/>
+                <select id="question2" name="question2" onchange="setTimeout(Log_L,1500);">
+                    <option value="">请选择</option>
+                    <option value="我的小学名字？">我的小学名字？</option>
+                    <option value="我妈妈的生日？">我妈妈的生日？</option>
+                    <option value="我最难忘的日子？">我最难忘的日子？</option>
+                    <option value="我的学号(或工号)是？">我的学号(或工号)是？</option>
+                    <option value="我配偶的姓名是？">我配偶的姓名是？</option>
+                    <option value="我最喜欢的休闲运动是什么？">我最喜欢的休闲运动是什么？</option>
+                    <option value="我最喜欢的歌曲？">我最喜欢的歌曲？</option>
+                    <option value="我最喜爱的电影？">我最喜爱的电影？</option>
+                </select>
+             </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <th>你的答案：</th>
+            <td><img src="/gaea-resources/images/b.gif" class="iconNone"/><span class="inputBox" id="answer_input2"><cite><input type="text" class="text" id="answer2" name="answer2" onkeydown="setTimeout(Log_M,1500);" onfocus="PT_Answer2Focus();" onblur="PT_Answer2Blur();" onchange="PT_Answer2Blur();"/></cite></span></td>
+            <td id="tdAnswer2">&nbsp;</td>
+        </tr>
+    </table>
+</div>
+                                <table width="100%">
+                                    <tr id="trVerifyPic">
+                                        <th>验证图片：</th>
+                                        <td colspan="2"><img id="numimg" style="padding-left:12px;" class="iconCode"/><a href="javascript:showValidateCode();" class="codeLink" >看不清，换一张</a></td>
+                                    </tr>
+                                    <tr id="trVerifCode">
+                                  	    <th>验证码：</th>
+                                        <td width="25%"><img src="/gaea-resources/images/b.gif" class="iconNotice"/><span class="inputBox input100" id="code_input"><cite><input type="text" class="text" id="attcode2" name="attcode2" maxlength="10" onfocus="PT_AttcodeFocus();" onblur="PT_AttcodeBlur();" onkeydown="setTimeout(Log_S,1500);"/></cite></span></td>
+                                        <td width="56%" id="tdAttcode"></td>
+                                    </tr>
+                                    
+<tr>
+  <th width="19%"></th>
+  <td colspan="2">
+    <img class="iconNone" src="/gaea-resources/images/b.gif" alt="">
+    <span class="button buttonArrow" id="spanSubmit">
+      <span><input value="注册盛大通行证" type="submit" id="btnSubmit"></span>
+    </span>
+  </td>
+</tr>
+                                    <tr class="agree">
+  <th width="19%"></th>
+  <td  width="34%">
+    <img class="iconNone" src="/gaea-resources/images/b.gif" alt="">
+    <input type="checkbox" id="chkAgreement" name="chkAgreement" checked="checked"/>
+    <label for="chkAgreement">
+      我接受<a href="/gaea-resources/xieyi.html" class="line" target="_blank">盛大通行证用户服务协议</a>
+    </label>
+  </td>
+  <td width="47%" name="chkAgreementTip"></td>
+</tr>
+
+<tr style="display:none">
+  <th width="19%"></th>
+  <td colspan="2">
+    <input id="chkPromoRegSpreadr" type="checkbox" name="chkPromoRegSpreadr" value="1" checked="checked"/>
+    <label for="chkPromoRegSpreadr">
+      我已经看过并同意<a href="http://178.sdo.com/agreement.htm" target="_blank">《盛大推广员协议》</a>
+    </label>
+  </td>
+  <td width="47%" name="chkAgreementTip"></td>
+</tr>
+                            </table>
+                            </div>
+                        
+
+
+<div id="MiniRightDiv" class="phoneSide_1" style="z-index:100;">
+  <div class="phoneSideT"></div>
+  <div class="phoneSidebg">切换
+    <ul>
+      
+        <li style="display:;"><span class="icon_reg_3" title="手机账号"></span></li>
+      
+      
+        <li style="display:;"><span class="icon_reg_1" title="邮件账号"></span></li>
+      
+      
+    </ul>
+    <div class="arrow_r" id="arrow2"></div>
+  </div>
+  <div class="phoneSideB"></div>
+</div>
+<div id="MidRightDiv" class="phoneSide_1 phoneSide_2" style="z-index:100;">
+  <div class="phoneSideT"></div>
+  <div class="phoneSidebg">切换注册方式
+    <ul>
+      
+        <li style="display:;">
+          <a href="phone_default.aspx?from=212" id="Phone_mrd">
+            <span class="icon_reg_3" title="手机账号"></span>手机账号
+          </a>
+        </li>
+      
+      
+        <li style="display:;">
+          <a href="input_mail.aspx?from=212" id="Email_mrd">
+            <span class="icon_reg_1" title="邮箱账号"></span>邮箱账号
+          </a>
+        </li>
+      
+      
+    </ul>
+    <div class="arrow_l" id="ShowMiniRightDiv"></div>
+  </div>
+  <div class="phoneSideB"></div>
+</div>
+                        </div>
+                    </div>
+             	</div>
+                <div class="bottom">
+              	    <div class="bottomPo"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer"><a href="http://www.snda.com" target="_blank">盛大网络</a> 旗下网站 上海盛大网络发展有限公司 版权所有<br />24小时客服热线：95105222；未开通95地区或海外用户请拨 +86-21-50504728</div>
+        
+        <div style="display:none">
+          <div id="divHideForCheck" name="divHideForCheck"></div>
+        </div>
+
+        <div id="gethelp"><a href="#" id="gethelpclose"><label for="gethelpclose"></label></a><a id="gethelper" href="javascript:void(0);"><label for="gethelper"></label></a></div>
+        <script type="text/javascript">
+          
+          showValidateCode();
+          LoadXMLHttpJs();
+          if (!false && !false) {
+              $("#pwdProtectQuestion").before($("#RegEmailShow"));
+          }
+          $('#RegEmailShow').removeClass("RegEmailShowControl");
+          inputRealNameIdCardShowControl(false);
+        </script>
+    
+    </form>    
+    <iframe src="http://adrs.sdo.com/ADRefererSystem/prereg.html" width="0" height="0" style="display:none;"></iframe>    
+    <iframe id="frmSessionRefresh" name="frmSessionRefresh" src="blank.aspx" width="0" height="0" style="display:none;"></iframe> 
+    <script type="text/javascript">
+        Refresh4Session();
+    </script>
+    
+  <script type="text/javascript">
+    var snda_os_webrefer_ufg = {
+      gm:19990,
+      triggers:{
+        floatwin:["010101", "010102"],
+        extend:[
+          { triggerid:"_help_os_t_id_001", source:"010103" },
+          { triggerid:"_help_os_t_id_002", source:"010103" }
+        ]
+      },
+      t:"账号注册问题",
+      adjustright:0,
+      adjusttop:150,
+      switchwaiting:30000,
+      imgpath:'/gaea-resources/images_7k_2lc'
+    };
+  </script>
+  <script type="text/javascript" src="/gaea-resources/js/snda_os_widget.js?20120705"></script>
+
+</body>
+</html>
+

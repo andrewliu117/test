@@ -1,0 +1,5 @@
+strict digraph  {
+	node [label="\N"];
+	a	 [label=lhj];
+	b -> c	 [label="this is it"];
+}
