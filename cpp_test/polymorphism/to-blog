@@ -1,36 +1,19 @@
-1. 为什么析构函数要定义为虚函数？
-参考duotai.cc文件，如果不定义为虚函数，有可能导致派生类的资源无法释放。
 
-2. 为什么构造函数不能定义为虚函数？
-a，虚函数对应一个vtable，通过 vtable来调用虚函数，vtable存放在对象的内存空间中，可是对象还没有实例化，也就是内存空间还没有，怎么找vtable呢？
-b. 虚函数的作用在于通过父类的指针或者引用来调用它的时候，能够变成调用子类的那个成员函数。而构造函数的作用是提供初始化，在对象生命期只执行一次，不是对象的动态行为，也没有太大的必要成为虚函数
-
-c.当一个构造函数被调用时，它做的首要的事情之一是初始化它的V P T R。因此，它只能知道它是“当前”类的，而完全忽视这个对象后面是否还有继承者。 当编译器为这个构造函数产生代码时，它是为这个类的构造函数产生代码- -既不是为基类，也不是为它的派生类（因为类不知道谁继承它）。      所以它使用的V P T R必须是对于这个类的V TA B L E。而且，只要它是最后的构造函数调用，那么在这个对象的生命期内， V P T R将 保持被初始化为指向这个V TA B L E, 但如果接着还有一个更晚派生的构造函数被调用，这个构造函数又将设置V P T R指向它的 V TA B L E，等.直到最后的构造函数结束。V P T R的状态是由被最后调用的构造函数确定的。这就是为什么构造函数调用是从基类到更加派生 类顺序的另一个理由。  
-但是，当这一系列构造函数调用正发生时，每个构造函数都已经设置V P T R指向它自己的 V TA B L E。如果函数调用使用虚机制，它将只产生通过它自己的V TA B L E的调用，而不是最后的V TA B L E（所有构造函数被 调用后才会有最后的V TA B L E）。
-
-编译时报错
-
-3. 构造函数的调用顺序？
-加入虚继承
+3. 虚继承的构造函数的调用顺序？
 
 4. 虚继承
 http://www.cppblog.com/chemz/archive/2007/06/12/26135.html
 http://www.cppblog.com/franksunny/archive/2008/10/16/64168.aspx
 http://baiy.cn/doc/cpp/inside_rtti.htm
 
-5.虚继承和虚函数表的实现方式
+5.虚继承的实现方式
 
 5. 多态的实现
 
-6. 用c实现多态
-http://www.linuxidc.com/Linux/2012-02/53371.htm
-http://blog.csdn.net/haoel/article/details/1948051/
-
-指针转换的问题
-
-7. protected
+7. protected, 继承的关系
 
 8. 各种cast and RTTI
+指针转换的问题, 继承情况下，指针转换后，编译器是怎么处理的
 http://www.cnblogs.com/stli/archive/2010/10/09/1846926.html
 http://blog.rednet.cn/user1/213546/archives/2007/33023.html
 
@@ -40,7 +23,6 @@ http://baike.baidu.com/view/1042388.htm
 9. hash
 10. 深度学习
 
-
 11. python的机器学习工具
 scikit-learn: machine learning in Python
 Easy-to-use and general-purpose machine learning in Python 
@@ -48,3 +30,9 @@ python的机器学习工具
 http://scikit-learn.org/stable/
 
 12. B+树
+
+13. flex and bison
+
+14. gcc的汇编学习
+
+15. friend 函数
