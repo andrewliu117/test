@@ -13,7 +13,7 @@ public class Sample1 {
 		boolean bool = sample.booleanMethod(true);
 		System.out.println("booleanMethod: " + bool);
 
-		String text = sample.stringMethod("JAVA");
+		String text = sample.stringMethod("java");
 		System.out.println("stringMethod: " + text);
 
 		int sum = sample.intArrayMethod(new int[] { 1, 1, 2, 3, 5, 8, 13 });
