@@ -8,6 +8,7 @@
 import json
 import urllib2
 import time
+import sys
 
 headers={
 "Host": "pic.hao123.com",
@@ -29,5 +30,31 @@ for k in headers.keys():
     req.add_header(k,headers[k])
 
 response = urllib2.urlopen(req, "")
-print response.read()
+res_json = response.read()
+#print res_json
+
+pics = json.loads(res_json)
+#print json.dumps(pics[0], indent=4)
+#sys.exit(0)
+
+ret = []
+
+for item in pics:
+    one_pic = {}
+    item_310 = item["picurl"]["310"]
+    one_pic["url"] = item_310["picurl"] 
+    one_pic["image"] = item_310["picurl"]
+    one_pic["preview"] = item_310["picurl"]
+    one_pic["id"] = item["id"]
+    one_pic["title"] = item["title"]
+    one_pic["referer"] = "http://pic.hao123.com/meinv_meitui?style=xl"
+    one_pic["width"] = item_310["width"]
+    one_pic["height"] = item_310["height"]
+
+    ret.append(one_pic)
+    
+    print json.dumps(ret, indent=4)
+    
+    sys.exit(0)
+
 
