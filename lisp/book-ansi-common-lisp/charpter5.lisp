@@ -13,3 +13,5 @@
 ;    ((lambda(z) (cons w (+ w z))) z)) (car x))
 ((lambda (w)
     ((lambda(z) (cons w (+ w z))) 4)) (car '(1 2 3)))
+
+
