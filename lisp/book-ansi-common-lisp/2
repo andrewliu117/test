@@ -1,0 +1,47 @@
+;5.1
+;a
+
+((lambda (x) (cons x x)) (car '(1 2 3)))
+
+;b
+;((lambda (w z) (cons w (+ w z))) (car x) z)
+;((lambda (w)
+;    ((lambda (y) (cons w y)) (+ w z))) (car x))
+((lambda (w)
+      ((lambda (y) (cons w y)) (+ w 4))) (car '(1 2 3)))
+;((lambda (w)
+;    ((lambda(z) (cons w (+ w z))) z)) (car x))
+((lambda (w)
+    ((lambda(z) (cons w (+ w z))) 4)) (car '(1 2 3)))
+
+;5.2
+(defun mystery (x y)
+    (cond ((null y) nil)
+          ((eql (car y) x) 0)
+          (t (let ((z (mystery x (cdry)))))
+                  (and z (+ z 1)))))
+
+;5.3
+
+(defun square (x)
+    (cond 
+        ((and (integerp x) (> x 0) (< x 6) ) x)
+        (t (* x x))))
+
+;5.4
+(defun month-num (m y)
+   (+ (svref month (- m 1))
+      ( case m
+            ((1 2) 0)
+             (3 4 5 6 7 8 9 10 11 12) (if (leap? y) 1 0))))
+
+;5.5
+(defun precedes (x lst)
+    (setf pre nil)
+    (setf l nil)
+    (dolist (obj lst)
+        (if pre
+            (if (eql obj x)
+                (cons pre l)))
+        (setf pre obj)))
+
