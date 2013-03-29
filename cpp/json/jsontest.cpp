@@ -1,9 +1,23 @@
 #include <iostream>
-#include "../../../snda_repository/search/code/public/third_part/jsoncpp/include/json/json.h"
+#include "json/json.h"
 #include <string>
 
 using namespace std;
 using namespace Json;
+
+void testjson(void) {
+    Value obj;
+
+    obj["list"].append(1);
+    obj["list"].append(2);
+    //obj["dict"] = new Value;
+    obj["dict"]["key1"] = "a";
+    obj["dict"]["key2"] = "B";
+
+    StyledWriter writer;
+    cout << "--- in function testjson() ---" << endl; 
+    cout << writer.write(obj) << endl; 
+}
 
 int main(void)
 {
@@ -32,4 +46,6 @@ int main(void)
 	//if(obj.isMember("d") ){
 		cout << "equal" << endl;
 	}
+
+    testjson();
 }
