@@ -7,12 +7,18 @@ using namespace Json;
 
 void testjson(void) {
     Value obj;
+    Value obj1;
+    Reader reader;
 
     obj["list"].append(1);
     obj["list"].append(2);
     //obj["dict"] = new Value;
     obj["dict"]["key1"] = "a";
     obj["dict"]["key2"] = "B";
+
+    reader.parse("{\"a\":1,\"b\":[2,3,4,5], \"c\":[], \"d\":\"haha\"}", obj1);
+    string js = "json";
+    obj[js] =  obj1;
 
     StyledWriter writer;
     cout << "--- in function testjson() ---" << endl; 

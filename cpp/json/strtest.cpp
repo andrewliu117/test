@@ -32,4 +32,13 @@ int main(void)
 	cout << b << endl;
 	cout << b.length() << endl;
 	cout << b[b.length() -1 ] << endl;
+
+    string a1= "123";
+    string a2= "ABC";
+    string a3= "abc";
+    
+    string arr[3] = {a1, a2, a3};
+    for (int i = 0; i < 3; i++) {
+        cout << arr[i] << endl;
+    }
 }

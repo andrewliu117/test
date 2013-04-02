@@ -1,4 +1,4 @@
 #!/bin/bash
-g++ -o jsontest jsontest.cpp -L ./ -ljson
+g++ -o jsontest.run jsontest.cpp -L ./ -ljson
 
-g++ -o strtest strtest.cpp
+g++ -o strtest.run strtest.cpp

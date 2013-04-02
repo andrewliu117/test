@@ -2,4 +2,4 @@
 
 
 
-g++ -o time time.cc
+g++ -o time.run time.cc
