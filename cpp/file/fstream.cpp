@@ -1,11 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <fstream>
+#include <string>
+#include <string.h>
 
 using namespace std;
 
 void initfile() {
     fstream fs("b.txt", ios_base::in | ios_base::out | ios_base::binary | ios_base::trunc);
-    if (!fs.fail()){
+    if (fs.fail()){
         printf("fs fail\n");
         return;
     }
@@ -15,10 +18,10 @@ void initfile() {
 }
 
 void writecell() {
+    //fstream fs("b.txt", ios_base::in | ios_base::out | ios_base::binary);
     fstream fs("b.txt", ios_base::in | ios_base::out | ios_base::binary);
-    fs.seekp(11*4);
+    fs.seekp(18*4);
     int i = 28;
-    //fs << i;
     fs.write((char*)&i, 4);
     fs.close();
 }
@@ -45,11 +48,27 @@ void printblock() {
     fs.close();
 }
 
-int main(void) {
+void getlast() {
+    fstream fs("b.txt", ios_base::in | ios_base::out | ios_base::binary);
+    fs.seekp(18*4);
+    int i = 0;
+    fs.read((char*) & i, 4);
+    printf("the last cell is: %d\n", i);
+    if (fs.eof()){
+        printf("eof is meet\n");
+    }
 
+    fs.close();
+}
+
+int main(void) {
     initfile();
     printblock();
     writecell();
     getcell();
     printblock();
+    getlast();
+    printf("atoi %d\n", atoi(" "));
+    string str = " ";
+    printf("atoi1 %d\n", atoi(str.c_str()));
 }

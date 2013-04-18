@@ -32,4 +32,8 @@ int main(void)
 	str[str.length() - 1] = 0;
 	cout << str << endl;
 	cout << str.length() << endl;
+    
+    str="liuhj@github.com:/home/andrew/temep/";
+    cout << str.substr(str.find(":") + 1) << endl;
+
 }
