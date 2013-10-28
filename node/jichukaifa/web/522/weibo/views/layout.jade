@@ -1,7 +1,39 @@
 doctype 5
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    title
+        = title 
+        | Miroblog
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    style(type='text/css')
+        body {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+    link(href='stylesheets/bootstrap-responsive.css' rel='stylesheet')
   body
-    block content
+    div.navbar.navbar-fixed-top
+        div.navbar-inner
+            div.container
+                a.btn.btn-navbar(data-toggle='collapse' data-target='.nav-collapse')
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.brand(href='/') Miroblog
+                div.nav-collapse
+                    ul.nav
+                        li.active
+                            a(href='/') 首页
+                        li
+                            a(href='/login') 登入
+                        li
+                            a(href='/reg') 注册
+    div#container.container
+        block content
+        hr
+        footer
+            p
+                a(href='http://www.byvoid.com/' target='_blank') BYVOID
+                | 2012
+  script(src='/javascripts/jquery.js')
+  script(src='/javascripts/bootstrap.js')

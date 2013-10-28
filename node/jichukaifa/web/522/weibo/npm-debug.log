@@ -1,0 +1,1087 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'i', 'connect' ]
+2 info using npm@1.2.32
+3 info using node@v0.10.12
+4 verbose read json /home/andrew/andrew-github/test/node/jichukaifa/web/522/weibo/package.json
+5 warn package.json application-name@0.0.1 No repository field.
+6 warn package.json application-name@0.0.1 No readme data.
+7 verbose from cache /home/andrew/andrew-github/test/node/jichukaifa/web/522/weibo/package.json
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'connect', null ]
+10 verbose cache add name=undefined spec="connect" args=["connect",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'connect',
+11 verbose parsed url   path: 'connect',
+11 verbose parsed url   href: 'connect' }
+12 silly lockFile f11a107f-connect connect
+13 verbose lock connect /home/andrew/.npm/f11a107f-connect.lock
+14 silly lockFile f11a107f-connect connect
+15 silly lockFile f11a107f-connect connect
+16 verbose addNamed [ 'connect', '' ]
+17 verbose addNamed [ null, '' ]
+18 silly lockFile 6c45e0f3-connect connect@
+19 verbose lock connect@ /home/andrew/.npm/6c45e0f3-connect.lock
+20 silly addNameRange { name: 'connect', range: '', hasData: false }
+21 verbose url raw connect
+22 verbose url resolving [ 'https://registry.npmjs.org/', './connect' ]
+23 verbose url resolved https://registry.npmjs.org/connect
+24 info trying registry request attempt 1 at 20:06:43
+25 verbose etag "4J9VE3K9Q7JSHYRP6YKLQGPVA"
+26 http GET https://registry.npmjs.org/connect
+27 http 200 https://registry.npmjs.org/connect
+28 silly registry.get cb [ 200,
+28 silly registry.get   { vary: 'Accept',
+28 silly registry.get     server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+28 silly registry.get     etag: '"9RBUZWA1J6SECEH9MV5HZGBLW"',
+28 silly registry.get     date: 'Mon, 28 Oct 2013 12:06:56 GMT',
+28 silly registry.get     'content-type': 'application/json',
+28 silly registry.get     'content-length': '310494' } ]
+29 silly addNameRange number 2 { name: 'connect', range: '', hasData: true }
+30 silly addNameRange versions [ 'connect',
+30 silly addNameRange   [ '0.0.1',
+30 silly addNameRange     '0.0.2',
+30 silly addNameRange     '0.0.3',
+30 silly addNameRange     '0.0.4',
+30 silly addNameRange     '0.0.5',
+30 silly addNameRange     '0.0.6',
+30 silly addNameRange     '0.1.0',
+30 silly addNameRange     '0.2.0',
+30 silly addNameRange     '0.2.1',
+30 silly addNameRange     '0.2.2',
+30 silly addNameRange     '0.2.3',
+30 silly addNameRange     '0.2.4',
+30 silly addNameRange     '0.2.5',
+30 silly addNameRange     '0.2.6',
+30 silly addNameRange     '0.2.7',
+30 silly addNameRange     '0.3.0',
+30 silly addNameRange     '0.4.0',
+30 silly addNameRange     '0.5.0',
+30 silly addNameRange     '0.5.1',
+30 silly addNameRange     '0.5.2',
+30 silly addNameRange     '0.5.3',
+30 silly addNameRange     '0.5.4',
+30 silly addNameRange     '0.5.5',
+30 silly addNameRange     '0.5.6',
+30 silly addNameRange     '0.5.7',
+30 silly addNameRange     '0.5.8',
+30 silly addNameRange     '0.5.9',
+30 silly addNameRange     '0.5.10',
+30 silly addNameRange     '1.0.0',
+30 silly addNameRange     '1.0.1',
+30 silly addNameRange     '1.0.2',
+30 silly addNameRange     '1.0.3',
+30 silly addNameRange     '1.0.4',
+30 silly addNameRange     '1.0.5',
+30 silly addNameRange     '1.0.6',
+30 silly addNameRange     '1.1.0',
+30 silly addNameRange     '1.1.1',
+30 silly addNameRange     '1.1.2',
+30 silly addNameRange     '1.1.3',
+30 silly addNameRange     '1.1.4',
+30 silly addNameRange     '1.1.5',
+30 silly addNameRange     '1.2.0',
+30 silly addNameRange     '1.2.1',
+30 silly addNameRange     '1.2.2',
+30 silly addNameRange     '1.2.3',
+30 silly addNameRange     '1.3.0',
+30 silly addNameRange     '1.4.0',
+30 silly addNameRange     '1.4.1',
+30 silly addNameRange     '1.4.2',
+30 silly addNameRange     '1.4.3',
+30 silly addNameRange     '1.4.4',
+30 silly addNameRange     '1.4.5',
+30 silly addNameRange     '1.4.6',
+30 silly addNameRange     '1.5.0',
+30 silly addNameRange     '1.5.1',
+30 silly addNameRange     '1.5.2',
+30 silly addNameRange     '1.6.0',
+30 silly addNameRange     '1.6.1',
+30 silly addNameRange     '1.6.2',
+30 silly addNameRange     '1.6.3',
+30 silly addNameRange     '1.6.4',
+30 silly addNameRange     '1.7.0',
+30 silly addNameRange     '1.7.1',
+30 silly addNameRange     '1.7.2',
+30 silly addNameRange     '1.7.3',
+30 silly addNameRange     '1.8.0',
+30 silly addNameRange     '1.8.1',
+30 silly addNameRange     '1.8.2',
+30 silly addNameRange     '1.8.3',
+30 silly addNameRange     '1.8.4',
+30 silly addNameRange     '1.8.5',
+30 silly addNameRange     '2.0.0',
+30 silly addNameRange     '2.0.1',
+30 silly addNameRange     '2.0.2',
+30 silly addNameRange     '2.0.3',
+30 silly addNameRange     '1.8.6',
+30 silly addNameRange     '2.1.0',
+30 silly addNameRange     '2.1.1',
+30 silly addNameRange     '2.1.2',
+30 silly addNameRange     '1.8.7',
+30 silly addNameRange     '2.1.3',
+30 silly addNameRange     '2.2.0',
+30 silly addNameRange     '2.2.1',
+30 silly addNameRange     '2.2.2',
+30 silly addNameRange     '2.3.0',
+30 silly addNameRange     '2.3.1',
+30 silly addNameRange     '2.3.2',
+30 silly addNameRange     '2.3.3',
+30 silly addNameRange     '1.9.0',
+30 silly addNameRange     '1.9.1',
+30 silly addNameRange     '2.3.4',
+30 silly addNameRange     '2.3.5',
+30 silly addNameRange     '2.3.6',
+30 silly addNameRange     '2.3.7',
+30 silly addNameRange     '1.9.2',
+30 silly addNameRange     '2.3.8',
+30 silly addNameRange     '2.3.9',
+30 silly addNameRange     '2.4.0',
+30 silly addNameRange     '2.4.1',
+30 silly addNameRange     '2.4.2',
+30 silly addNameRange     '2.4.3',
+30 silly addNameRange     '2.4.4',
+30 silly addNameRange     '2.4.5',
+30 silly addNameRange     '2.4.6',
+30 silly addNameRange     '2.5.0',
+30 silly addNameRange     '2.6.0',
+30 silly addNameRange     '2.6.1',
+30 silly addNameRange     '2.6.2',
+30 silly addNameRange     '2.7.0',
+30 silly addNameRange     '2.7.1',
+30 silly addNameRange     '2.7.2',
+30 silly addNameRange     '2.7.3',
+30 silly addNameRange     '2.7.4',
+30 silly addNameRange     '2.7.5',
+30 silly addNameRange     '2.7.6',
+30 silly addNameRange     '2.7.7',
+30 silly addNameRange     '2.7.8',
+30 silly addNameRange     '2.7.9',
+30 silly addNameRange     '2.7.10',
+30 silly addNameRange     '2.7.11',
+30 silly addNameRange     '2.8.0',
+30 silly addNameRange     '2.8.1',
+30 silly addNameRange     '2.8.2',
+30 silly addNameRange     '2.8.3',
+30 silly addNameRange     '2.8.4',
+30 silly addNameRange     '2.8.5',
+30 silly addNameRange     '2.8.6',
+30 silly addNameRange     '2.8.7',
+30 silly addNameRange     '2.8.8',
+30 silly addNameRange     '2.9.0',
+30 silly addNameRange     '2.9.1',
+30 silly addNameRange     '2.9.2',
+30 silly addNameRange     '2.10.0',
+30 silly addNameRange     '2.10.1' ] ]
+31 verbose addNamed [ 'connect', '2.10.1' ]
+32 verbose addNamed [ '2.10.1', '2.10.1' ]
+33 silly lockFile fc3d8274-connect-2-10-1 connect@2.10.1
+34 verbose lock connect@2.10.1 /home/andrew/.npm/fc3d8274-connect-2-10-1.lock
+35 verbose read json /home/andrew/.npm/connect/2.10.1/package/package.json
+36 silly lockFile fc3d8274-connect-2-10-1 connect@2.10.1
+37 silly lockFile fc3d8274-connect-2-10-1 connect@2.10.1
+38 silly lockFile 6c45e0f3-connect connect@
+39 silly lockFile 6c45e0f3-connect connect@
+40 silly resolved [ { name: 'connect',
+40 silly resolved     version: '2.10.1',
+40 silly resolved     description: 'High performance middleware framework',
+40 silly resolved     keywords: [ 'framework', 'web', 'middleware', 'connect', 'rack' ],
+40 silly resolved     repository: { type: 'git', url: 'git://github.com/senchalabs/connect.git' },
+40 silly resolved     author:
+40 silly resolved      { name: 'TJ Holowaychuk',
+40 silly resolved        email: 'tj@vision-media.ca',
+40 silly resolved        url: 'http://tjholowaychuk.com' },
+40 silly resolved     dependencies:
+40 silly resolved      { qs: '0.6.5',
+40 silly resolved        'cookie-signature': '1.0.1',
+40 silly resolved        'buffer-crc32': '0.2.1',
+40 silly resolved        cookie: '0.1.0',
+40 silly resolved        send: '0.1.4',
+40 silly resolved        bytes: '0.2.0',
+40 silly resolved        fresh: '0.2.0',
+40 silly resolved        pause: '0.0.1',
+40 silly resolved        uid2: '0.0.2',
+40 silly resolved        debug: '*',
+40 silly resolved        methods: '0.0.1',
+40 silly resolved        'raw-body': '0.0.3',
+40 silly resolved        negotiator: '0.2.8',
+40 silly resolved        multiparty: '2.2.0' },
+40 silly resolved     devDependencies: { should: '>= 2.0.0', mocha: '*', jade: '*', dox: '*' },
+40 silly resolved     licenses: [ [Object] ],
+40 silly resolved     main: 'index',
+40 silly resolved     engines: { node: '>= 0.8.0' },
+40 silly resolved     scripts: { test: 'make' },
+40 silly resolved     readme: '# Connect [![build status](https://secure.travis-ci.org/senchalabs/connect.png)](http://travis-ci.org/senchalabs/connect)\n\n  Connect is an extensible HTTP server framework for [node](http://nodejs.org), providing high performance "plugins" known as _middleware_.\n\n Connect is bundled with over _20_ commonly used middleware, including\n a logger, session support, cookie parser, and [more](http://senchalabs.github.com/connect). Be sure to view the 2.x [documentation](http://senchalabs.github.com/connect/).\n\n```js\nvar connect = require(\'connect\')\n  , http = require(\'http\');\n\nvar app = connect()\n  .use(connect.favicon())\n  .use(connect.logger(\'dev\'))\n  .use(connect.static(\'public\'))\n  .use(connect.directory(\'public\'))\n  .use(connect.cookieParser())\n  .use(connect.session({ secret: \'my secret here\' }))\n  .use(function(req, res){\n    res.end(\'Hello from Connect!\\n\');\n  });\n\nhttp.createServer(app).listen(3000);\n```\n\n## Middleware\n\n  - [basicAuth](http://www.senchalabs.org/connect/basicAuth.html)\n  - [bodyParser](http://www.senchalabs.org/connect/bodyParser.html)\n  - [compress](http://www.senchalabs.org/connect/compress.html)\n  - [cookieParser](http://www.senchalabs.org/connect/cookieParser.html)\n  - [cookieSession](http://www.senchalabs.org/connect/cookieSession.html)\n  - [csrf](http://www.senchalabs.org/connect/csrf.html)\n  - [directory](http://www.senchalabs.org/connect/directory.html)\n  - [errorHandler](http://www.senchalabs.org/connect/errorHandler.html)\n  - [favicon](http://www.senchalabs.org/connect/favicon.html)\n  - [json](http://www.senchalabs.org/connect/json.html)\n  - [limit](http://www.senchalabs.org/connect/limit.html)\n  - [logger](http://www.senchalabs.org/connect/logger.html)\n  - [methodOverride](http://www.senchalabs.org/connect/methodOverride.html)\n  - [multipart](http://www.senchalabs.org/connect/multipart.html)\n  - [urlencoded](http://www.senchalabs.org/connect/urlencoded.html)\n  - [query](http://www.senchalabs.org/connect/query.html)\n  - [responseTime](http://www.senchalabs.org/connect/responseTime.html)\n  - [session](http://www.senchalabs.org/connect/session.html)\n  - [static](http://www.senchalabs.org/connect/static.html)\n  - [staticCache](http://www.senchalabs.org/connect/staticCache.html)\n  - [subdomains](http://www.senchalabs.org/connect/subdomains.html)\n  - [vhost](http://www.senchalabs.org/connect/vhost.html)\n\n## Running Tests\n\nfirst:\n\n    $ npm install -d\n\nthen:\n\n    $ make test\n\n## Contributors\n\n https://github.com/senchalabs/connect/graphs/contributors\n\n## Node Compatibility\n\n  Connect `< 1.x` is compatible with node 0.2.x\n\n\n  Connect `1.x` is compatible with node 0.4.x\n\n\n  Connect `2.x` is compatible with node 0.6.x\n\n\n  Connect (_master_) is compatible with node 0.8.x\n\n## CLA\n\n [http://sencha.com/cla](http://sencha.com/cla)\n\n## License\n\nView the [LICENSE](https://github.com/senchalabs/connect/blob/master/LICENSE) file. The [Silk](http://www.famfamfam.com/lab/icons/silk/) icons used by the `directory` middleware created by/copyright of [FAMFAMFAM](http://www.famfamfam.com/).\n',
+40 silly resolved     readmeFilename: 'Readme.md',
+40 silly resolved     bugs: { url: 'https://github.com/senchalabs/connect/issues' },
+40 silly resolved     _id: 'connect@2.10.1',
+40 silly resolved     _from: 'connect@' } ]
+41 info install connect@2.10.1 into /home/andrew/andrew-github/test/node/jichukaifa/web/522/weibo
+42 info installOne connect@2.10.1
+43 verbose from cache /home/andrew/.npm/connect/2.10.1/package/package.json
+44 info /home/andrew/andrew-github/test/node/jichukaifa/web/522/weibo/node_modules/connect unbuild
+45 verbose read json /home/andrew/andrew-github/test/node/jichukaifa/web/522/weibo/node_modules/connect/package.json
+46 verbose tar unpack /home/andrew/.npm/connect/2.10.1/package.tgz
+47 silly lockFile 3de9a02a-b-522-weibo-node-modules-connect tar:///home/andrew/andrew-github/test/node/jichukaifa/web/522/weibo/node_modules/connect
+48 verbose lock tar:///home/andrew/andrew-github/test/node/jichukaifa/web/522/weibo/node_modules/connect /home/andrew/.npm/3de9a02a-b-522-weibo-node-modules-connect.lock
+49 silly lockFile 57b266a1-w-npm-connect-2-10-1-package-tgz tar:///home/andrew/.npm/connect/2.10.1/package.tgz
+50 verbose lock tar:///home/andrew/.npm/connect/2.10.1/package.tgz /home/andrew/.npm/57b266a1-w-npm-connect-2-10-1-package-tgz.lock
+51 silly gunzTarPerm modes [ '755', '644' ]
+52 silly gunzTarPerm extractEntry package.json
+53 silly gunzTarPerm extractEntry .npmignore
+54 silly gunzTarPerm extractEntry LICENSE
+55 silly gunzTarPerm extractEntry index.js
+56 silly gunzTarPerm extractEntry .travis.yml
+57 silly gunzTarPerm extractEntry Readme.md
+58 silly gunzTarPerm extractEntry lib/cache.js
+59 silly gunzTarPerm extractEntry lib/connect.js
+60 silly gunzTarPerm extractEntry lib/index.js
+61 silly gunzTarPerm extractEntry lib/patch.js
+62 silly gunzTarPerm extractEntry lib/proto.js
+63 silly gunzTarPerm extractEntry lib/utils.js
+64 silly gunzTarPerm extractEntry lib/middleware/basicAuth.js
+65 silly gunzTarPerm extractEntry lib/middleware/errorHandler.js
+66 silly gunzTarPerm extractEntry lib/middleware/favicon.js
+67 silly gunzTarPerm extractEntry lib/middleware/json.js
+68 silly gunzTarPerm extractEntry lib/middleware/limit.js
+69 silly gunzTarPerm extractEntry lib/middleware/directory.js
+70 silly gunzTarPerm extractEntry lib/middleware/methodOverride.js
+71 silly gunzTarPerm extractEntry lib/middleware/multipart.js
+72 silly gunzTarPerm extractEntry lib/middleware/query.js
+73 silly gunzTarPerm extractEntry lib/middleware/responseTime.js
+74 silly gunzTarPerm extractEntry lib/middleware/urlencoded.js
+75 silly gunzTarPerm extractEntry lib/middleware/csrf.js
+76 silly gunzTarPerm extractEntry lib/middleware/session.js
+77 silly gunzTarPerm extractEntry lib/middleware/cookieSession.js
+78 silly gunzTarPerm extractEntry lib/middleware/static.js
+79 silly gunzTarPerm extractEntry lib/middleware/cookieParser.js
+80 silly gunzTarPerm extractEntry lib/middleware/staticCache.js
+81 silly gunzTarPerm extractEntry lib/middleware/compress.js
+82 silly gunzTarPerm extractEntry lib/middleware/timeout.js
+83 silly gunzTarPerm extractEntry lib/middleware/bodyParser.js
+84 silly gunzTarPerm extractEntry lib/middleware/vhost.js
+85 silly gunzTarPerm extractEntry lib/middleware/logger.js
+86 silly gunzTarPerm extractEntry lib/middleware/session/cookie.js
+87 silly gunzTarPerm extractEntry lib/middleware/session/memory.js
+88 silly gunzTarPerm extractEntry lib/middleware/session/session.js
+89 silly gunzTarPerm extractEntry lib/middleware/session/store.js
+90 silly gunzTarPerm extractEntry lib/public/directory.html
+91 silly gunzTarPerm extractEntry lib/public/error.html
+92 silly gunzTarPerm extractEntry lib/public/favicon.ico
+93 silly gunzTarPerm extractEntry lib/public/icons/page_white_edit.png
+94 silly gunzTarPerm extractEntry lib/public/icons/page.png
+95 silly gunzTarPerm extractEntry lib/public/icons/page_attach.png
+96 silly gunzTarPerm extractEntry lib/public/icons/page_code.png
+97 silly gunzTarPerm extractEntry lib/public/icons/page_copy.png
+98 silly gunzTarPerm extractEntry lib/public/icons/page_delete.png
+99 silly gunzTarPerm extractEntry lib/public/icons/page_edit.png
+100 silly gunzTarPerm extractEntry lib/public/icons/page_error.png
+101 silly gunzTarPerm extractEntry lib/public/icons/page_excel.png
+102 silly gunzTarPerm extractEntry lib/public/icons/page_find.png
+103 silly gunzTarPerm extractEntry lib/public/icons/page_gear.png
+104 silly gunzTarPerm extractEntry lib/public/icons/page_go.png
+105 silly gunzTarPerm extractEntry lib/public/icons/page_green.png
+106 silly gunzTarPerm extractEntry lib/public/icons/page_key.png
+107 silly gunzTarPerm extractEntry lib/public/icons/page_lightning.png
+108 silly gunzTarPerm extractEntry lib/public/icons/page_link.png
+109 silly gunzTarPerm extractEntry lib/public/icons/page_paintbrush.png
+110 silly gunzTarPerm extractEntry lib/public/icons/page_paste.png
+111 silly gunzTarPerm extractEntry lib/public/icons/page_red.png
+112 silly gunzTarPerm extractEntry lib/public/icons/page_refresh.png
+113 silly gunzTarPerm extractEntry lib/public/icons/page_save.png
+114 silly gunzTarPerm extractEntry lib/public/icons/page_white.png
+115 silly gunzTarPerm extractEntry lib/public/icons/page_white_acrobat.png
+116 silly gunzTarPerm extractEntry lib/public/icons/page_white_actionscript.png
+117 silly gunzTarPerm extractEntry lib/public/icons/page_white_add.png
+118 silly gunzTarPerm extractEntry lib/public/icons/page_white_c.png
+119 silly gunzTarPerm extractEntry lib/public/icons/page_white_camera.png
+120 silly gunzTarPerm extractEntry lib/public/icons/page_white_cd.png
+121 silly gunzTarPerm extractEntry lib/public/icons/page_white_code.png
+122 silly gunzTarPerm extractEntry lib/public/icons/page_white_code_red.png
+123 silly gunzTarPerm extractEntry lib/public/icons/page_white_coldfusion.png
+124 silly gunzTarPerm extractEntry lib/public/icons/page_white_compressed.png
+125 silly gunzTarPerm extractEntry lib/public/icons/page_white_copy.png
+126 silly gunzTarPerm extractEntry lib/public/icons/page_white_cplusplus.png
+127 silly gunzTarPerm extractEntry lib/public/icons/page_white_csharp.png
+128 silly gunzTarPerm extractEntry lib/public/icons/page_white_cup.png
+129 silly gunzTarPerm extractEntry lib/public/icons/page_white_database.png
+130 silly gunzTarPerm extractEntry lib/public/icons/page_white_delete.png
+131 silly gunzTarPerm extractEntry lib/public/icons/page_white_dvd.png
+132 silly gunzTarPerm extractEntry lib/public/icons/page_add.png
+133 silly gunzTarPerm extractEntry lib/public/icons/page_white_error.png
+134 silly gunzTarPerm extractEntry lib/public/icons/page_white_excel.png
+135 silly gunzTarPerm extractEntry lib/public/icons/page_white_find.png
+136 silly gunzTarPerm extractEntry lib/public/icons/page_white_flash.png
+137 silly gunzTarPerm extractEntry lib/public/icons/page_white_freehand.png
+138 silly gunzTarPerm extractEntry lib/public/icons/page_white_gear.png
+139 silly gunzTarPerm extractEntry lib/public/icons/page_white_get.png
+140 silly gunzTarPerm extractEntry lib/public/icons/page_white_go.png
+141 silly gunzTarPerm extractEntry lib/public/icons/page_white_h.png
+142 silly gunzTarPerm extractEntry lib/public/icons/page_white_horizontal.png
+143 silly gunzTarPerm extractEntry lib/public/icons/page_white_key.png
+144 silly gunzTarPerm extractEntry lib/public/icons/page_white_lightning.png
+145 silly gunzTarPerm extractEntry lib/public/icons/page_white_link.png
+146 silly gunzTarPerm extractEntry lib/public/icons/page_white_magnify.png
+147 silly gunzTarPerm extractEntry lib/public/icons/page_white_medal.png
+148 silly gunzTarPerm extractEntry lib/public/icons/page_white_office.png
+149 silly gunzTarPerm extractEntry lib/public/icons/page_white_paint.png
+150 silly gunzTarPerm extractEntry lib/public/icons/page_white_paintbrush.png
+151 silly gunzTarPerm extractEntry lib/public/icons/page_white_paste.png
+152 silly gunzTarPerm extractEntry lib/public/icons/page_white_php.png
+153 silly gunzTarPerm extractEntry lib/public/icons/page_white_picture.png
+154 silly gunzTarPerm extractEntry lib/public/icons/page_white_powerpoint.png
+155 silly gunzTarPerm extractEntry lib/public/icons/page_white_put.png
+156 silly gunzTarPerm extractEntry lib/public/icons/page_white_ruby.png
+157 silly gunzTarPerm extractEntry lib/public/icons/page_white_stack.png
+158 silly gunzTarPerm extractEntry lib/public/icons/page_white_star.png
+159 silly gunzTarPerm extractEntry lib/public/icons/page_white_swoosh.png
+160 silly gunzTarPerm extractEntry lib/public/icons/page_white_text.png
+161 silly gunzTarPerm extractEntry lib/public/icons/page_white_text_width.png
+162 silly gunzTarPerm extractEntry lib/public/icons/page_white_tux.png
+163 silly gunzTarPerm extractEntry lib/public/icons/page_white_vector.png
+164 silly gunzTarPerm extractEntry lib/public/icons/page_white_visualstudio.png
+165 silly gunzTarPerm extractEntry lib/public/icons/page_white_width.png
+166 silly gunzTarPerm extractEntry lib/public/icons/page_white_word.png
+167 silly gunzTarPerm extractEntry lib/public/icons/page_white_world.png
+168 silly gunzTarPerm extractEntry lib/public/icons/page_white_wrench.png
+169 silly gunzTarPerm extractEntry lib/public/icons/page_white_zip.png
+170 silly gunzTarPerm extractEntry lib/public/icons/page_word.png
+171 silly gunzTarPerm extractEntry lib/public/icons/page_world.png
+172 silly gunzTarPerm extractEntry lib/public/style.css
+173 verbose read json /home/andrew/andrew-github/test/node/jichukaifa/web/522/weibo/node_modules/connect/package.json
+174 silly lockFile 3de9a02a-b-522-weibo-node-modules-connect tar:///home/andrew/andrew-github/test/node/jichukaifa/web/522/weibo/node_modules/connect
+175 silly lockFile 3de9a02a-b-522-weibo-node-modules-connect tar:///home/andrew/andrew-github/test/node/jichukaifa/web/522/weibo/node_modules/connect
+176 silly lockFile 57b266a1-w-npm-connect-2-10-1-package-tgz tar:///home/andrew/.npm/connect/2.10.1/package.tgz
+177 silly lockFile 57b266a1-w-npm-connect-2-10-1-package-tgz tar:///home/andrew/.npm/connect/2.10.1/package.tgz
+178 info preinstall connect@2.10.1
+179 verbose from cache /home/andrew/andrew-github/test/node/jichukaifa/web/522/weibo/node_modules/connect/package.json
+180 verbose readDependencies using package.json deps
+181 verbose from cache /home/andrew/andrew-github/test/node/jichukaifa/web/522/weibo/node_modules/connect/package.json
+182 verbose readDependencies using package.json deps
+183 verbose cache add [ 'qs@0.6.5', null ]
+184 verbose cache add name=undefined spec="qs@0.6.5" args=["qs@0.6.5",null]
+185 verbose parsed url { protocol: null,
+185 verbose parsed url   slashes: null,
+185 verbose parsed url   auth: null,
+185 verbose parsed url   host: null,
+185 verbose parsed url   port: null,
+185 verbose parsed url   hostname: null,
+185 verbose parsed url   hash: null,
+185 verbose parsed url   search: null,
+185 verbose parsed url   query: null,
+185 verbose parsed url   pathname: 'qs@0.6.5',
+185 verbose parsed url   path: 'qs@0.6.5',
+185 verbose parsed url   href: 'qs@0.6.5' }
+186 verbose cache add name="qs" spec="0.6.5" args=["qs","0.6.5"]
+187 verbose parsed url { protocol: null,
+187 verbose parsed url   slashes: null,
+187 verbose parsed url   auth: null,
+187 verbose parsed url   host: null,
+187 verbose parsed url   port: null,
+187 verbose parsed url   hostname: null,
+187 verbose parsed url   hash: null,
+187 verbose parsed url   search: null,
+187 verbose parsed url   query: null,
+187 verbose parsed url   pathname: '0.6.5',
+187 verbose parsed url   path: '0.6.5',
+187 verbose parsed url   href: '0.6.5' }
+188 verbose addNamed [ 'qs', '0.6.5' ]
+189 verbose addNamed [ '0.6.5', '0.6.5' ]
+190 silly lockFile f5e5a40f-qs-0-6-5 qs@0.6.5
+191 verbose lock qs@0.6.5 /home/andrew/.npm/f5e5a40f-qs-0-6-5.lock
+192 verbose cache add [ 'cookie-signature@1.0.1', null ]
+193 verbose cache add name=undefined spec="cookie-signature@1.0.1" args=["cookie-signature@1.0.1",null]
+194 verbose parsed url { protocol: null,
+194 verbose parsed url   slashes: null,
+194 verbose parsed url   auth: null,
+194 verbose parsed url   host: null,
+194 verbose parsed url   port: null,
+194 verbose parsed url   hostname: null,
+194 verbose parsed url   hash: null,
+194 verbose parsed url   search: null,
+194 verbose parsed url   query: null,
+194 verbose parsed url   pathname: 'cookie-signature@1.0.1',
+194 verbose parsed url   path: 'cookie-signature@1.0.1',
+194 verbose parsed url   href: 'cookie-signature@1.0.1' }
+195 verbose cache add name="cookie-signature" spec="1.0.1" args=["cookie-signature","1.0.1"]
+196 verbose parsed url { protocol: null,
+196 verbose parsed url   slashes: null,
+196 verbose parsed url   auth: null,
+196 verbose parsed url   host: null,
+196 verbose parsed url   port: null,
+196 verbose parsed url   hostname: null,
+196 verbose parsed url   hash: null,
+196 verbose parsed url   search: null,
+196 verbose parsed url   query: null,
+196 verbose parsed url   pathname: '1.0.1',
+196 verbose parsed url   path: '1.0.1',
+196 verbose parsed url   href: '1.0.1' }
+197 verbose addNamed [ 'cookie-signature', '1.0.1' ]
+198 verbose addNamed [ '1.0.1', '1.0.1' ]
+199 silly lockFile d4a1eba1-cookie-signature-1-0-1 cookie-signature@1.0.1
+200 verbose lock cookie-signature@1.0.1 /home/andrew/.npm/d4a1eba1-cookie-signature-1-0-1.lock
+201 verbose cache add [ 'cookie@0.1.0', null ]
+202 verbose cache add name=undefined spec="cookie@0.1.0" args=["cookie@0.1.0",null]
+203 verbose parsed url { protocol: null,
+203 verbose parsed url   slashes: null,
+203 verbose parsed url   auth: null,
+203 verbose parsed url   host: null,
+203 verbose parsed url   port: null,
+203 verbose parsed url   hostname: null,
+203 verbose parsed url   hash: null,
+203 verbose parsed url   search: null,
+203 verbose parsed url   query: null,
+203 verbose parsed url   pathname: 'cookie@0.1.0',
+203 verbose parsed url   path: 'cookie@0.1.0',
+203 verbose parsed url   href: 'cookie@0.1.0' }
+204 verbose cache add name="cookie" spec="0.1.0" args=["cookie","0.1.0"]
+205 verbose parsed url { protocol: null,
+205 verbose parsed url   slashes: null,
+205 verbose parsed url   auth: null,
+205 verbose parsed url   host: null,
+205 verbose parsed url   port: null,
+205 verbose parsed url   hostname: null,
+205 verbose parsed url   hash: null,
+205 verbose parsed url   search: null,
+205 verbose parsed url   query: null,
+205 verbose parsed url   pathname: '0.1.0',
+205 verbose parsed url   path: '0.1.0',
+205 verbose parsed url   href: '0.1.0' }
+206 verbose addNamed [ 'cookie', '0.1.0' ]
+207 verbose addNamed [ '0.1.0', '0.1.0' ]
+208 silly lockFile b55e145e-cookie-0-1-0 cookie@0.1.0
+209 verbose lock cookie@0.1.0 /home/andrew/.npm/b55e145e-cookie-0-1-0.lock
+210 verbose cache add [ 'buffer-crc32@0.2.1', null ]
+211 verbose cache add name=undefined spec="buffer-crc32@0.2.1" args=["buffer-crc32@0.2.1",null]
+212 verbose parsed url { protocol: null,
+212 verbose parsed url   slashes: null,
+212 verbose parsed url   auth: null,
+212 verbose parsed url   host: null,
+212 verbose parsed url   port: null,
+212 verbose parsed url   hostname: null,
+212 verbose parsed url   hash: null,
+212 verbose parsed url   search: null,
+212 verbose parsed url   query: null,
+212 verbose parsed url   pathname: 'buffer-crc32@0.2.1',
+212 verbose parsed url   path: 'buffer-crc32@0.2.1',
+212 verbose parsed url   href: 'buffer-crc32@0.2.1' }
+213 verbose cache add name="buffer-crc32" spec="0.2.1" args=["buffer-crc32","0.2.1"]
+214 verbose parsed url { protocol: null,
+214 verbose parsed url   slashes: null,
+214 verbose parsed url   auth: null,
+214 verbose parsed url   host: null,
+214 verbose parsed url   port: null,
+214 verbose parsed url   hostname: null,
+214 verbose parsed url   hash: null,
+214 verbose parsed url   search: null,
+214 verbose parsed url   query: null,
+214 verbose parsed url   pathname: '0.2.1',
+214 verbose parsed url   path: '0.2.1',
+214 verbose parsed url   href: '0.2.1' }
+215 verbose addNamed [ 'buffer-crc32', '0.2.1' ]
+216 verbose addNamed [ '0.2.1', '0.2.1' ]
+217 silly lockFile 057d0d26-buffer-crc32-0-2-1 buffer-crc32@0.2.1
+218 verbose lock buffer-crc32@0.2.1 /home/andrew/.npm/057d0d26-buffer-crc32-0-2-1.lock
+219 verbose cache add [ 'send@0.1.4', null ]
+220 verbose cache add name=undefined spec="send@0.1.4" args=["send@0.1.4",null]
+221 verbose parsed url { protocol: null,
+221 verbose parsed url   slashes: null,
+221 verbose parsed url   auth: null,
+221 verbose parsed url   host: null,
+221 verbose parsed url   port: null,
+221 verbose parsed url   hostname: null,
+221 verbose parsed url   hash: null,
+221 verbose parsed url   search: null,
+221 verbose parsed url   query: null,
+221 verbose parsed url   pathname: 'send@0.1.4',
+221 verbose parsed url   path: 'send@0.1.4',
+221 verbose parsed url   href: 'send@0.1.4' }
+222 verbose cache add name="send" spec="0.1.4" args=["send","0.1.4"]
+223 verbose parsed url { protocol: null,
+223 verbose parsed url   slashes: null,
+223 verbose parsed url   auth: null,
+223 verbose parsed url   host: null,
+223 verbose parsed url   port: null,
+223 verbose parsed url   hostname: null,
+223 verbose parsed url   hash: null,
+223 verbose parsed url   search: null,
+223 verbose parsed url   query: null,
+223 verbose parsed url   pathname: '0.1.4',
+223 verbose parsed url   path: '0.1.4',
+223 verbose parsed url   href: '0.1.4' }
+224 verbose addNamed [ 'send', '0.1.4' ]
+225 verbose addNamed [ '0.1.4', '0.1.4' ]
+226 silly lockFile 555fd08a-send-0-1-4 send@0.1.4
+227 verbose lock send@0.1.4 /home/andrew/.npm/555fd08a-send-0-1-4.lock
+228 verbose cache add [ 'bytes@0.2.0', null ]
+229 verbose cache add name=undefined spec="bytes@0.2.0" args=["bytes@0.2.0",null]
+230 verbose parsed url { protocol: null,
+230 verbose parsed url   slashes: null,
+230 verbose parsed url   auth: null,
+230 verbose parsed url   host: null,
+230 verbose parsed url   port: null,
+230 verbose parsed url   hostname: null,
+230 verbose parsed url   hash: null,
+230 verbose parsed url   search: null,
+230 verbose parsed url   query: null,
+230 verbose parsed url   pathname: 'bytes@0.2.0',
+230 verbose parsed url   path: 'bytes@0.2.0',
+230 verbose parsed url   href: 'bytes@0.2.0' }
+231 verbose cache add name="bytes" spec="0.2.0" args=["bytes","0.2.0"]
+232 verbose parsed url { protocol: null,
+232 verbose parsed url   slashes: null,
+232 verbose parsed url   auth: null,
+232 verbose parsed url   host: null,
+232 verbose parsed url   port: null,
+232 verbose parsed url   hostname: null,
+232 verbose parsed url   hash: null,
+232 verbose parsed url   search: null,
+232 verbose parsed url   query: null,
+232 verbose parsed url   pathname: '0.2.0',
+232 verbose parsed url   path: '0.2.0',
+232 verbose parsed url   href: '0.2.0' }
+233 verbose addNamed [ 'bytes', '0.2.0' ]
+234 verbose addNamed [ '0.2.0', '0.2.0' ]
+235 silly lockFile e351aee0-bytes-0-2-0 bytes@0.2.0
+236 verbose lock bytes@0.2.0 /home/andrew/.npm/e351aee0-bytes-0-2-0.lock
+237 verbose cache add [ 'fresh@0.2.0', null ]
+238 verbose cache add name=undefined spec="fresh@0.2.0" args=["fresh@0.2.0",null]
+239 verbose parsed url { protocol: null,
+239 verbose parsed url   slashes: null,
+239 verbose parsed url   auth: null,
+239 verbose parsed url   host: null,
+239 verbose parsed url   port: null,
+239 verbose parsed url   hostname: null,
+239 verbose parsed url   hash: null,
+239 verbose parsed url   search: null,
+239 verbose parsed url   query: null,
+239 verbose parsed url   pathname: 'fresh@0.2.0',
+239 verbose parsed url   path: 'fresh@0.2.0',
+239 verbose parsed url   href: 'fresh@0.2.0' }
+240 verbose cache add name="fresh" spec="0.2.0" args=["fresh","0.2.0"]
+241 verbose parsed url { protocol: null,
+241 verbose parsed url   slashes: null,
+241 verbose parsed url   auth: null,
+241 verbose parsed url   host: null,
+241 verbose parsed url   port: null,
+241 verbose parsed url   hostname: null,
+241 verbose parsed url   hash: null,
+241 verbose parsed url   search: null,
+241 verbose parsed url   query: null,
+241 verbose parsed url   pathname: '0.2.0',
+241 verbose parsed url   path: '0.2.0',
+241 verbose parsed url   href: '0.2.0' }
+242 verbose addNamed [ 'fresh', '0.2.0' ]
+243 verbose addNamed [ '0.2.0', '0.2.0' ]
+244 silly lockFile 1a4cf0d3-fresh-0-2-0 fresh@0.2.0
+245 verbose lock fresh@0.2.0 /home/andrew/.npm/1a4cf0d3-fresh-0-2-0.lock
+246 verbose cache add [ 'pause@0.0.1', null ]
+247 verbose cache add name=undefined spec="pause@0.0.1" args=["pause@0.0.1",null]
+248 verbose parsed url { protocol: null,
+248 verbose parsed url   slashes: null,
+248 verbose parsed url   auth: null,
+248 verbose parsed url   host: null,
+248 verbose parsed url   port: null,
+248 verbose parsed url   hostname: null,
+248 verbose parsed url   hash: null,
+248 verbose parsed url   search: null,
+248 verbose parsed url   query: null,
+248 verbose parsed url   pathname: 'pause@0.0.1',
+248 verbose parsed url   path: 'pause@0.0.1',
+248 verbose parsed url   href: 'pause@0.0.1' }
+249 verbose cache add name="pause" spec="0.0.1" args=["pause","0.0.1"]
+250 verbose parsed url { protocol: null,
+250 verbose parsed url   slashes: null,
+250 verbose parsed url   auth: null,
+250 verbose parsed url   host: null,
+250 verbose parsed url   port: null,
+250 verbose parsed url   hostname: null,
+250 verbose parsed url   hash: null,
+250 verbose parsed url   search: null,
+250 verbose parsed url   query: null,
+250 verbose parsed url   pathname: '0.0.1',
+250 verbose parsed url   path: '0.0.1',
+250 verbose parsed url   href: '0.0.1' }
+251 verbose addNamed [ 'pause', '0.0.1' ]
+252 verbose addNamed [ '0.0.1', '0.0.1' ]
+253 silly lockFile c62fc432-pause-0-0-1 pause@0.0.1
+254 verbose lock pause@0.0.1 /home/andrew/.npm/c62fc432-pause-0-0-1.lock
+255 verbose cache add [ 'uid2@0.0.2', null ]
+256 verbose cache add name=undefined spec="uid2@0.0.2" args=["uid2@0.0.2",null]
+257 verbose parsed url { protocol: null,
+257 verbose parsed url   slashes: null,
+257 verbose parsed url   auth: null,
+257 verbose parsed url   host: null,
+257 verbose parsed url   port: null,
+257 verbose parsed url   hostname: null,
+257 verbose parsed url   hash: null,
+257 verbose parsed url   search: null,
+257 verbose parsed url   query: null,
+257 verbose parsed url   pathname: 'uid2@0.0.2',
+257 verbose parsed url   path: 'uid2@0.0.2',
+257 verbose parsed url   href: 'uid2@0.0.2' }
+258 verbose cache add name="uid2" spec="0.0.2" args=["uid2","0.0.2"]
+259 verbose parsed url { protocol: null,
+259 verbose parsed url   slashes: null,
+259 verbose parsed url   auth: null,
+259 verbose parsed url   host: null,
+259 verbose parsed url   port: null,
+259 verbose parsed url   hostname: null,
+259 verbose parsed url   hash: null,
+259 verbose parsed url   search: null,
+259 verbose parsed url   query: null,
+259 verbose parsed url   pathname: '0.0.2',
+259 verbose parsed url   path: '0.0.2',
+259 verbose parsed url   href: '0.0.2' }
+260 verbose addNamed [ 'uid2', '0.0.2' ]
+261 verbose addNamed [ '0.0.2', '0.0.2' ]
+262 silly lockFile aaa92211-uid2-0-0-2 uid2@0.0.2
+263 verbose lock uid2@0.0.2 /home/andrew/.npm/aaa92211-uid2-0-0-2.lock
+264 verbose cache add [ 'debug@*', null ]
+265 verbose cache add name=undefined spec="debug@*" args=["debug@*",null]
+266 verbose parsed url { protocol: null,
+266 verbose parsed url   slashes: null,
+266 verbose parsed url   auth: null,
+266 verbose parsed url   host: null,
+266 verbose parsed url   port: null,
+266 verbose parsed url   hostname: null,
+266 verbose parsed url   hash: null,
+266 verbose parsed url   search: null,
+266 verbose parsed url   query: null,
+266 verbose parsed url   pathname: 'debug@*',
+266 verbose parsed url   path: 'debug@*',
+266 verbose parsed url   href: 'debug@*' }
+267 verbose cache add name="debug" spec="*" args=["debug","*"]
+268 verbose parsed url { protocol: null,
+268 verbose parsed url   slashes: null,
+268 verbose parsed url   auth: null,
+268 verbose parsed url   host: null,
+268 verbose parsed url   port: null,
+268 verbose parsed url   hostname: null,
+268 verbose parsed url   hash: null,
+268 verbose parsed url   search: null,
+268 verbose parsed url   query: null,
+268 verbose parsed url   pathname: '*',
+268 verbose parsed url   path: '*',
+268 verbose parsed url   href: '*' }
+269 verbose addNamed [ 'debug', '*' ]
+270 verbose addNamed [ null, '' ]
+271 silly lockFile 3ac45eff-debug debug@*
+272 verbose lock debug@* /home/andrew/.npm/3ac45eff-debug.lock
+273 verbose cache add [ 'methods@0.0.1', null ]
+274 verbose cache add name=undefined spec="methods@0.0.1" args=["methods@0.0.1",null]
+275 verbose parsed url { protocol: null,
+275 verbose parsed url   slashes: null,
+275 verbose parsed url   auth: null,
+275 verbose parsed url   host: null,
+275 verbose parsed url   port: null,
+275 verbose parsed url   hostname: null,
+275 verbose parsed url   hash: null,
+275 verbose parsed url   search: null,
+275 verbose parsed url   query: null,
+275 verbose parsed url   pathname: 'methods@0.0.1',
+275 verbose parsed url   path: 'methods@0.0.1',
+275 verbose parsed url   href: 'methods@0.0.1' }
+276 verbose cache add name="methods" spec="0.0.1" args=["methods","0.0.1"]
+277 verbose parsed url { protocol: null,
+277 verbose parsed url   slashes: null,
+277 verbose parsed url   auth: null,
+277 verbose parsed url   host: null,
+277 verbose parsed url   port: null,
+277 verbose parsed url   hostname: null,
+277 verbose parsed url   hash: null,
+277 verbose parsed url   search: null,
+277 verbose parsed url   query: null,
+277 verbose parsed url   pathname: '0.0.1',
+277 verbose parsed url   path: '0.0.1',
+277 verbose parsed url   href: '0.0.1' }
+278 verbose addNamed [ 'methods', '0.0.1' ]
+279 verbose addNamed [ '0.0.1', '0.0.1' ]
+280 silly lockFile 209c2920-methods-0-0-1 methods@0.0.1
+281 verbose lock methods@0.0.1 /home/andrew/.npm/209c2920-methods-0-0-1.lock
+282 verbose cache add [ 'raw-body@0.0.3', null ]
+283 verbose cache add name=undefined spec="raw-body@0.0.3" args=["raw-body@0.0.3",null]
+284 verbose parsed url { protocol: null,
+284 verbose parsed url   slashes: null,
+284 verbose parsed url   auth: null,
+284 verbose parsed url   host: null,
+284 verbose parsed url   port: null,
+284 verbose parsed url   hostname: null,
+284 verbose parsed url   hash: null,
+284 verbose parsed url   search: null,
+284 verbose parsed url   query: null,
+284 verbose parsed url   pathname: 'raw-body@0.0.3',
+284 verbose parsed url   path: 'raw-body@0.0.3',
+284 verbose parsed url   href: 'raw-body@0.0.3' }
+285 verbose cache add name="raw-body" spec="0.0.3" args=["raw-body","0.0.3"]
+286 verbose parsed url { protocol: null,
+286 verbose parsed url   slashes: null,
+286 verbose parsed url   auth: null,
+286 verbose parsed url   host: null,
+286 verbose parsed url   port: null,
+286 verbose parsed url   hostname: null,
+286 verbose parsed url   hash: null,
+286 verbose parsed url   search: null,
+286 verbose parsed url   query: null,
+286 verbose parsed url   pathname: '0.0.3',
+286 verbose parsed url   path: '0.0.3',
+286 verbose parsed url   href: '0.0.3' }
+287 verbose addNamed [ 'raw-body', '0.0.3' ]
+288 verbose addNamed [ '0.0.3', '0.0.3' ]
+289 silly lockFile f4dfbef7-raw-body-0-0-3 raw-body@0.0.3
+290 verbose lock raw-body@0.0.3 /home/andrew/.npm/f4dfbef7-raw-body-0-0-3.lock
+291 verbose cache add [ 'negotiator@0.2.8', null ]
+292 verbose cache add name=undefined spec="negotiator@0.2.8" args=["negotiator@0.2.8",null]
+293 verbose parsed url { protocol: null,
+293 verbose parsed url   slashes: null,
+293 verbose parsed url   auth: null,
+293 verbose parsed url   host: null,
+293 verbose parsed url   port: null,
+293 verbose parsed url   hostname: null,
+293 verbose parsed url   hash: null,
+293 verbose parsed url   search: null,
+293 verbose parsed url   query: null,
+293 verbose parsed url   pathname: 'negotiator@0.2.8',
+293 verbose parsed url   path: 'negotiator@0.2.8',
+293 verbose parsed url   href: 'negotiator@0.2.8' }
+294 verbose cache add name="negotiator" spec="0.2.8" args=["negotiator","0.2.8"]
+295 verbose parsed url { protocol: null,
+295 verbose parsed url   slashes: null,
+295 verbose parsed url   auth: null,
+295 verbose parsed url   host: null,
+295 verbose parsed url   port: null,
+295 verbose parsed url   hostname: null,
+295 verbose parsed url   hash: null,
+295 verbose parsed url   search: null,
+295 verbose parsed url   query: null,
+295 verbose parsed url   pathname: '0.2.8',
+295 verbose parsed url   path: '0.2.8',
+295 verbose parsed url   href: '0.2.8' }
+296 verbose addNamed [ 'negotiator', '0.2.8' ]
+297 verbose addNamed [ '0.2.8', '0.2.8' ]
+298 silly lockFile bf85c2ab-negotiator-0-2-8 negotiator@0.2.8
+299 verbose lock negotiator@0.2.8 /home/andrew/.npm/bf85c2ab-negotiator-0-2-8.lock
+300 verbose cache add [ 'multiparty@2.2.0', null ]
+301 verbose cache add name=undefined spec="multiparty@2.2.0" args=["multiparty@2.2.0",null]
+302 verbose parsed url { protocol: null,
+302 verbose parsed url   slashes: null,
+302 verbose parsed url   auth: null,
+302 verbose parsed url   host: null,
+302 verbose parsed url   port: null,
+302 verbose parsed url   hostname: null,
+302 verbose parsed url   hash: null,
+302 verbose parsed url   search: null,
+302 verbose parsed url   query: null,
+302 verbose parsed url   pathname: 'multiparty@2.2.0',
+302 verbose parsed url   path: 'multiparty@2.2.0',
+302 verbose parsed url   href: 'multiparty@2.2.0' }
+303 verbose cache add name="multiparty" spec="2.2.0" args=["multiparty","2.2.0"]
+304 verbose parsed url { protocol: null,
+304 verbose parsed url   slashes: null,
+304 verbose parsed url   auth: null,
+304 verbose parsed url   host: null,
+304 verbose parsed url   port: null,
+304 verbose parsed url   hostname: null,
+304 verbose parsed url   hash: null,
+304 verbose parsed url   search: null,
+304 verbose parsed url   query: null,
+304 verbose parsed url   pathname: '2.2.0',
+304 verbose parsed url   path: '2.2.0',
+304 verbose parsed url   href: '2.2.0' }
+305 verbose addNamed [ 'multiparty', '2.2.0' ]
+306 verbose addNamed [ '2.2.0', '2.2.0' ]
+307 silly lockFile f924b4a6-multiparty-2-2-0 multiparty@2.2.0
+308 verbose lock multiparty@2.2.0 /home/andrew/.npm/f924b4a6-multiparty-2-2-0.lock
+309 silly addNameRange { name: 'debug', range: '', hasData: false }
+310 verbose url raw qs/0.6.5
+311 verbose url resolving [ 'https://registry.npmjs.org/', './qs/0.6.5' ]
+312 verbose url resolved https://registry.npmjs.org/qs/0.6.5
+313 info trying registry request attempt 1 at 20:06:58
+314 verbose etag "A0908O91HJF6S9ZO1VDAN636E"
+315 http GET https://registry.npmjs.org/qs/0.6.5
+316 verbose url raw cookie-signature/1.0.1
+317 verbose url resolving [ 'https://registry.npmjs.org/', './cookie-signature/1.0.1' ]
+318 verbose url resolved https://registry.npmjs.org/cookie-signature/1.0.1
+319 info trying registry request attempt 1 at 20:06:58
+320 verbose etag "332BQXGWC1DJFGGZJ0ETUQXA6"
+321 http GET https://registry.npmjs.org/cookie-signature/1.0.1
+322 verbose url raw send/0.1.4
+323 verbose url resolving [ 'https://registry.npmjs.org/', './send/0.1.4' ]
+324 verbose url resolved https://registry.npmjs.org/send/0.1.4
+325 info trying registry request attempt 1 at 20:06:58
+326 verbose etag "44MEX16XITH6HKKBT0BOK31OO"
+327 http GET https://registry.npmjs.org/send/0.1.4
+328 verbose url raw buffer-crc32/0.2.1
+329 verbose url resolving [ 'https://registry.npmjs.org/', './buffer-crc32/0.2.1' ]
+330 verbose url resolved https://registry.npmjs.org/buffer-crc32/0.2.1
+331 info trying registry request attempt 1 at 20:06:59
+332 verbose etag "4JLO8SIQOKXMA94PVFN5E59WV"
+333 http GET https://registry.npmjs.org/buffer-crc32/0.2.1
+334 verbose url raw cookie/0.1.0
+335 verbose url resolving [ 'https://registry.npmjs.org/', './cookie/0.1.0' ]
+336 verbose url resolved https://registry.npmjs.org/cookie/0.1.0
+337 info trying registry request attempt 1 at 20:06:59
+338 verbose etag "F1R4EMW6NEBFUL3OK9Q9DKBJF"
+339 http GET https://registry.npmjs.org/cookie/0.1.0
+340 verbose url raw fresh/0.2.0
+341 verbose url resolving [ 'https://registry.npmjs.org/', './fresh/0.2.0' ]
+342 verbose url resolved https://registry.npmjs.org/fresh/0.2.0
+343 info trying registry request attempt 1 at 20:06:59
+344 verbose etag "6CDQ014VE8MJLSGJOYMKCVKVG"
+345 http GET https://registry.npmjs.org/fresh/0.2.0
+346 verbose url raw bytes/0.2.0
+347 verbose url resolving [ 'https://registry.npmjs.org/', './bytes/0.2.0' ]
+348 verbose url resolved https://registry.npmjs.org/bytes/0.2.0
+349 info trying registry request attempt 1 at 20:06:59
+350 verbose etag "DDRZ4XRRLN6Z0X2YNRRUFBM29"
+351 http GET https://registry.npmjs.org/bytes/0.2.0
+352 verbose url raw pause/0.0.1
+353 verbose url resolving [ 'https://registry.npmjs.org/', './pause/0.0.1' ]
+354 verbose url resolved https://registry.npmjs.org/pause/0.0.1
+355 info trying registry request attempt 1 at 20:06:59
+356 verbose etag "EOB5X18A1J6GDBBJPGSXXC6N8"
+357 http GET https://registry.npmjs.org/pause/0.0.1
+358 verbose url raw uid2/0.0.2
+359 verbose url resolving [ 'https://registry.npmjs.org/', './uid2/0.0.2' ]
+360 verbose url resolved https://registry.npmjs.org/uid2/0.0.2
+361 info trying registry request attempt 1 at 20:06:59
+362 verbose etag "6YUT1KABG2MRIOFA9YWQEHH5B"
+363 http GET https://registry.npmjs.org/uid2/0.0.2
+364 verbose url raw debug
+365 verbose url resolving [ 'https://registry.npmjs.org/', './debug' ]
+366 verbose url resolved https://registry.npmjs.org/debug
+367 info trying registry request attempt 1 at 20:06:59
+368 verbose etag "AI2IHWD96UTI2Y5ZY8SO9X426"
+369 http GET https://registry.npmjs.org/debug
+370 verbose url raw methods/0.0.1
+371 verbose url resolving [ 'https://registry.npmjs.org/', './methods/0.0.1' ]
+372 verbose url resolved https://registry.npmjs.org/methods/0.0.1
+373 info trying registry request attempt 1 at 20:06:59
+374 verbose etag "D7BIME5C6Q45VILIKMWZAC09D"
+375 http GET https://registry.npmjs.org/methods/0.0.1
+376 verbose url raw raw-body/0.0.3
+377 verbose url resolving [ 'https://registry.npmjs.org/', './raw-body/0.0.3' ]
+378 verbose url resolved https://registry.npmjs.org/raw-body/0.0.3
+379 info trying registry request attempt 1 at 20:06:59
+380 verbose etag "BGH5A2FN5CRG40M94E2FIK7RJ"
+381 http GET https://registry.npmjs.org/raw-body/0.0.3
+382 verbose url raw negotiator/0.2.8
+383 verbose url resolving [ 'https://registry.npmjs.org/', './negotiator/0.2.8' ]
+384 verbose url resolved https://registry.npmjs.org/negotiator/0.2.8
+385 info trying registry request attempt 1 at 20:06:59
+386 verbose etag "ABBGFF914GSDN2CNMDROFOFXN"
+387 http GET https://registry.npmjs.org/negotiator/0.2.8
+388 verbose url raw multiparty/2.2.0
+389 verbose url resolving [ 'https://registry.npmjs.org/', './multiparty/2.2.0' ]
+390 verbose url resolved https://registry.npmjs.org/multiparty/2.2.0
+391 info trying registry request attempt 1 at 20:06:59
+392 verbose etag "24CVO36LEQ3FFH1S0WSGMXZAK"
+393 http GET https://registry.npmjs.org/multiparty/2.2.0
+394 http 304 https://registry.npmjs.org/cookie-signature/1.0.1
+395 silly registry.get cb [ 304,
+395 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+395 silly registry.get     etag: '"332BQXGWC1DJFGGZJ0ETUQXA6"',
+395 silly registry.get     date: 'Mon, 28 Oct 2013 12:07:01 GMT',
+395 silly registry.get     'content-length': '0' } ]
+396 verbose etag cookie-signature/1.0.1 from cache
+397 verbose read json /home/andrew/.npm/cookie-signature/1.0.1/package/package.json
+398 warn package.json cookie-signature@1.0.1 No repository field.
+399 silly lockFile d4a1eba1-cookie-signature-1-0-1 cookie-signature@1.0.1
+400 silly lockFile d4a1eba1-cookie-signature-1-0-1 cookie-signature@1.0.1
+401 http 304 https://registry.npmjs.org/qs/0.6.5
+402 silly registry.get cb [ 304,
+402 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+402 silly registry.get     etag: '"A0908O91HJF6S9ZO1VDAN636E"',
+402 silly registry.get     date: 'Mon, 28 Oct 2013 12:07:01 GMT',
+402 silly registry.get     'content-length': '0' } ]
+403 verbose etag qs/0.6.5 from cache
+404 verbose read json /home/andrew/.npm/qs/0.6.5/package/package.json
+405 silly lockFile f5e5a40f-qs-0-6-5 qs@0.6.5
+406 silly lockFile f5e5a40f-qs-0-6-5 qs@0.6.5
+407 http 304 https://registry.npmjs.org/send/0.1.4
+408 silly registry.get cb [ 304,
+408 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+408 silly registry.get     etag: '"44MEX16XITH6HKKBT0BOK31OO"',
+408 silly registry.get     date: 'Mon, 28 Oct 2013 12:07:01 GMT',
+408 silly registry.get     'content-length': '0' } ]
+409 verbose etag send/0.1.4 from cache
+410 verbose read json /home/andrew/.npm/send/0.1.4/package/package.json
+411 http 304 https://registry.npmjs.org/cookie/0.1.0
+412 silly registry.get cb [ 304,
+412 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+412 silly registry.get     etag: '"F1R4EMW6NEBFUL3OK9Q9DKBJF"',
+412 silly registry.get     date: 'Mon, 28 Oct 2013 12:07:01 GMT',
+412 silly registry.get     'content-length': '0' } ]
+413 verbose etag cookie/0.1.0 from cache
+414 verbose read json /home/andrew/.npm/cookie/0.1.0/package/package.json
+415 silly lockFile 555fd08a-send-0-1-4 send@0.1.4
+416 silly lockFile 555fd08a-send-0-1-4 send@0.1.4
+417 silly lockFile b55e145e-cookie-0-1-0 cookie@0.1.0
+418 silly lockFile b55e145e-cookie-0-1-0 cookie@0.1.0
+419 http 304 https://registry.npmjs.org/fresh/0.2.0
+420 silly registry.get cb [ 304,
+420 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+420 silly registry.get     etag: '"6CDQ014VE8MJLSGJOYMKCVKVG"',
+420 silly registry.get     date: 'Mon, 28 Oct 2013 12:07:01 GMT',
+420 silly registry.get     'content-length': '0' } ]
+421 verbose etag fresh/0.2.0 from cache
+422 verbose read json /home/andrew/.npm/fresh/0.2.0/package/package.json
+423 silly lockFile 1a4cf0d3-fresh-0-2-0 fresh@0.2.0
+424 silly lockFile 1a4cf0d3-fresh-0-2-0 fresh@0.2.0
+425 http 304 https://registry.npmjs.org/bytes/0.2.0
+426 silly registry.get cb [ 304,
+426 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+426 silly registry.get     etag: '"DDRZ4XRRLN6Z0X2YNRRUFBM29"',
+426 silly registry.get     date: 'Mon, 28 Oct 2013 12:07:02 GMT',
+426 silly registry.get     'content-length': '0' } ]
+427 verbose etag bytes/0.2.0 from cache
+428 verbose read json /home/andrew/.npm/bytes/0.2.0/package/package.json
+429 warn package.json bytes@0.2.0 No repository field.
+430 silly lockFile e351aee0-bytes-0-2-0 bytes@0.2.0
+431 silly lockFile e351aee0-bytes-0-2-0 bytes@0.2.0
+432 http 304 https://registry.npmjs.org/pause/0.0.1
+433 silly registry.get cb [ 304,
+433 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+433 silly registry.get     etag: '"EOB5X18A1J6GDBBJPGSXXC6N8"',
+433 silly registry.get     date: 'Mon, 28 Oct 2013 12:07:02 GMT',
+433 silly registry.get     'content-length': '0' } ]
+434 verbose etag pause/0.0.1 from cache
+435 verbose read json /home/andrew/.npm/pause/0.0.1/package/package.json
+436 http 304 https://registry.npmjs.org/uid2/0.0.2
+437 silly registry.get cb [ 304,
+437 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+437 silly registry.get     etag: '"6YUT1KABG2MRIOFA9YWQEHH5B"',
+437 silly registry.get     date: 'Mon, 28 Oct 2013 12:07:02 GMT',
+437 silly registry.get     'content-length': '0' } ]
+438 verbose etag uid2/0.0.2 from cache
+439 warn package.json pause@0.0.1 No repository field.
+440 silly lockFile c62fc432-pause-0-0-1 pause@0.0.1
+441 silly lockFile c62fc432-pause-0-0-1 pause@0.0.1
+442 verbose read json /home/andrew/.npm/uid2/0.0.2/package/package.json
+443 warn package.json uid2@0.0.2 No repository field.
+444 warn package.json uid2@0.0.2 No readme data.
+445 silly lockFile aaa92211-uid2-0-0-2 uid2@0.0.2
+446 silly lockFile aaa92211-uid2-0-0-2 uid2@0.0.2
+447 http 304 https://registry.npmjs.org/debug
+448 silly registry.get cb [ 304,
+448 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+448 silly registry.get     etag: '"AI2IHWD96UTI2Y5ZY8SO9X426"',
+448 silly registry.get     date: 'Mon, 28 Oct 2013 12:07:02 GMT',
+448 silly registry.get     'content-length': '0' } ]
+449 verbose etag debug from cache
+450 silly addNameRange number 2 { name: 'debug', range: '', hasData: true }
+451 silly addNameRange versions [ 'debug',
+451 silly addNameRange   [ '0.0.1',
+451 silly addNameRange     '0.1.0',
+451 silly addNameRange     '0.2.0',
+451 silly addNameRange     '0.3.0',
+451 silly addNameRange     '0.4.0',
+451 silly addNameRange     '0.4.1',
+451 silly addNameRange     '0.5.0',
+451 silly addNameRange     '0.6.0',
+451 silly addNameRange     '0.7.0',
+451 silly addNameRange     '0.7.1',
+451 silly addNameRange     '0.7.2' ] ]
+452 verbose addNamed [ 'debug', '0.7.2' ]
+453 verbose addNamed [ '0.7.2', '0.7.2' ]
+454 silly lockFile 432e5064-debug-0-7-2 debug@0.7.2
+455 verbose lock debug@0.7.2 /home/andrew/.npm/432e5064-debug-0-7-2.lock
+456 verbose read json /home/andrew/.npm/debug/0.7.2/package/package.json
+457 silly lockFile 432e5064-debug-0-7-2 debug@0.7.2
+458 silly lockFile 432e5064-debug-0-7-2 debug@0.7.2
+459 silly lockFile 3ac45eff-debug debug@*
+460 silly lockFile 3ac45eff-debug debug@*
+461 http 304 https://registry.npmjs.org/methods/0.0.1
+462 silly registry.get cb [ 304,
+462 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+462 silly registry.get     etag: '"D7BIME5C6Q45VILIKMWZAC09D"',
+462 silly registry.get     date: 'Mon, 28 Oct 2013 12:07:02 GMT',
+462 silly registry.get     'content-length': '0' } ]
+463 verbose etag methods/0.0.1 from cache
+464 verbose read json /home/andrew/.npm/methods/0.0.1/package/package.json
+465 warn package.json methods@0.0.1 No repository field.
+466 warn package.json methods@0.0.1 No readme data.
+467 silly lockFile 209c2920-methods-0-0-1 methods@0.0.1
+468 silly lockFile 209c2920-methods-0-0-1 methods@0.0.1
+469 http 304 https://registry.npmjs.org/raw-body/0.0.3
+470 silly registry.get cb [ 304,
+470 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+470 silly registry.get     etag: '"BGH5A2FN5CRG40M94E2FIK7RJ"',
+470 silly registry.get     date: 'Mon, 28 Oct 2013 12:07:02 GMT',
+470 silly registry.get     'content-length': '0' } ]
+471 verbose etag raw-body/0.0.3 from cache
+472 verbose read json /home/andrew/.npm/raw-body/0.0.3/package/package.json
+473 http 304 https://registry.npmjs.org/negotiator/0.2.8
+474 silly registry.get cb [ 304,
+474 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+474 silly registry.get     etag: '"ABBGFF914GSDN2CNMDROFOFXN"',
+474 silly registry.get     date: 'Mon, 28 Oct 2013 12:07:02 GMT',
+474 silly registry.get     'content-length': '0' } ]
+475 verbose etag negotiator/0.2.8 from cache
+476 silly lockFile f4dfbef7-raw-body-0-0-3 raw-body@0.0.3
+477 silly lockFile f4dfbef7-raw-body-0-0-3 raw-body@0.0.3
+478 verbose read json /home/andrew/.npm/negotiator/0.2.8/package/package.json
+479 silly lockFile bf85c2ab-negotiator-0-2-8 negotiator@0.2.8
+480 silly lockFile bf85c2ab-negotiator-0-2-8 negotiator@0.2.8
+481 http 304 https://registry.npmjs.org/buffer-crc32/0.2.1
+482 silly registry.get cb [ 304,
+482 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+482 silly registry.get     etag: '"4JLO8SIQOKXMA94PVFN5E59WV"',
+482 silly registry.get     date: 'Mon, 28 Oct 2013 12:07:02 GMT',
+482 silly registry.get     'content-length': '0' } ]
+483 verbose etag buffer-crc32/0.2.1 from cache
+484 verbose read json /home/andrew/.npm/buffer-crc32/0.2.1/package/package.json
+485 silly lockFile 057d0d26-buffer-crc32-0-2-1 buffer-crc32@0.2.1
+486 silly lockFile 057d0d26-buffer-crc32-0-2-1 buffer-crc32@0.2.1
+487 http 200 https://registry.npmjs.org/multiparty/2.2.0
+488 silly registry.get cb [ 200,
+488 silly registry.get   { vary: 'Accept',
+488 silly registry.get     server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+488 silly registry.get     etag: '"7M8ID7120BFESEFIFL84N8QAC"',
+488 silly registry.get     date: 'Mon, 28 Oct 2013 12:07:02 GMT',
+488 silly registry.get     'content-type': 'application/json',
+488 silly registry.get     'content-length': '7368' } ]
+489 silly lockFile a2d46e5f--multiparty-multiparty-2-2-0-tgz https://registry.npmjs.org/multiparty/-/multiparty-2.2.0.tgz
+490 verbose lock https://registry.npmjs.org/multiparty/-/multiparty-2.2.0.tgz /home/andrew/.npm/a2d46e5f--multiparty-multiparty-2-2-0-tgz.lock
+491 verbose addRemoteTarball [ 'https://registry.npmjs.org/multiparty/-/multiparty-2.2.0.tgz',
+491 verbose addRemoteTarball   'a567c2af000ad22dc8f2a653d91978ae1f5316f4' ]
+492 info retry fetch attempt 1 at 20:07:02
+493 verbose fetch to= /home/andrew/tmp/npm-11278/1382962022936-0.18580322316847742/tmp.tgz
+494 http GET https://registry.npmjs.org/multiparty/-/multiparty-2.2.0.tgz
+495 http 200 https://registry.npmjs.org/multiparty/-/multiparty-2.2.0.tgz
+496 silly lockFile a2d46e5f--multiparty-multiparty-2-2-0-tgz https://registry.npmjs.org/multiparty/-/multiparty-2.2.0.tgz
+497 silly lockFile a2d46e5f--multiparty-multiparty-2-2-0-tgz https://registry.npmjs.org/multiparty/-/multiparty-2.2.0.tgz
+498 silly lockFile f924b4a6-multiparty-2-2-0 multiparty@2.2.0
+499 silly lockFile f924b4a6-multiparty-2-2-0 multiparty@2.2.0
+500 verbose about to build /home/andrew/andrew-github/test/node/jichukaifa/web/522/weibo/node_modules/connect
+501 info /home/andrew/andrew-github/test/node/jichukaifa/web/522/weibo/node_modules/connect unbuild
+502 verbose from cache /home/andrew/andrew-github/test/node/jichukaifa/web/522/weibo/node_modules/connect/package.json
+503 info preuninstall connect@2.10.1
+504 info uninstall connect@2.10.1
+505 verbose true,/home/andrew/andrew-github/test/node/jichukaifa/web/522/weibo/node_modules,/home/andrew/andrew-github/test/node/jichukaifa/web/522/weibo/node_modules unbuild connect@2.10.1
+506 info postuninstall connect@2.10.1
+507 error Error: shasum check failed for /home/andrew/tmp/npm-11278/1382962022936-0.18580322316847742/tmp.tgz
+507 error Expected: a567c2af000ad22dc8f2a653d91978ae1f5316f4
+507 error Actual:   eaf74a317a688261ef8ffca0f56fd3422bec1c69
+507 error     at /usr/local/lib/node_modules/npm/node_modules/sha/index.js:32:8
+507 error     at ReadStream.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/sha/index.js:61:7)
+507 error     at ReadStream.EventEmitter.emit (events.js:117:20)
+507 error     at _stream_readable.js:910:16
+507 error     at process._tickCallback (node.js:415:13)
+508 error If you need help, you may report this log at:
+508 error     <http://github.com/isaacs/npm/issues>
+508 error or email it to:
+508 error     <npm-@googlegroups.com>
+509 error System Linux 3.2.0-55-generic
+510 error command "/usr/local/bin/node" "/usr/local/bin/npm" "i" "connect"
+511 error cwd /home/andrew/andrew-github/test/node/jichukaifa/web/522/weibo
+512 error node -v v0.10.12
+513 error npm -v 1.2.32
+514 verbose exit [ 1, true ]
