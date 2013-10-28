@@ -9,6 +9,9 @@ var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 
+var MongoStore = require('connect-mongo');
+var settings = require('./settings');
+
 var app = express();
 
 // all environments
@@ -19,7 +22,14 @@ app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
-app.use(app.router);
+app.use(express.cookieParser());
+app.use(express.session({
+    secret: settings.cookieSeceret,
+    store: new MongoStore({
+        db: settings.db
+    })
+}));
+app.use(express.router(routes));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
