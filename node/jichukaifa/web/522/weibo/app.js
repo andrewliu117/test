@@ -9,7 +9,7 @@ var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 
-var MongoStore = require('connect-mongo');
+var MongoStore = require('connect-mongodb');
 var settings = require('./settings');
 
 var app = express();
@@ -25,7 +25,7 @@ app.use(express.methodOverride());
 app.use(express.cookieParser());
 app.use(express.session({
     secret: settings.cookieSeceret,
-    store: new MongoStore({
+    Store: new MongoStore({
         db: settings.db
     })
 }));
