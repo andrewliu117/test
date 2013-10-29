@@ -3,30 +3,33 @@
  * GET home page.
  */
 
-exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
-};
+var crypto = require('crypto')
 
-exports.user = function(req, res){
-};
-
-exports.post = function(req, res){
-};
-
-exports.reg = function(req, res){
-};
-
-exports.doReg = function(req, res){
-};
-
-exports.login = function(req, res){
-};
-
-exports.doLogin = function(req, res){
-};
-
-exports.logout = function(req, res){
-};
+var User = require('./user');
+//exports.index = function(req, res){
+//  res.render('index', { title: 'Express' });
+//};
+//
+//exports.user = function(req, res){
+//};
+//
+//exports.post = function(req, res){
+//};
+//
+//exports.reg = function(req, res){
+//};
+//
+//exports.doReg = function(req, res){
+//};
+//
+//exports.login = function(req, res){
+//};
+//
+//exports.doLogin = function(req, res){
+//};
+//
+//exports.logout = function(req, res){
+//};
 
 module.exports = function(app) {
     app.get('/', function(req, res) {
@@ -42,8 +45,8 @@ module.exports = function(app) {
     });
 
 	app.post('/reg', function(req, res) {
-		if (req.bod['password-repeat'] != req.body['password']) {
-			req.flash('error', '两次输入的口令不一致');
+		if (req.body['password-repeat'] != req.body['password']) {
+			req.session.error = '两次输入的口令不一致';
 			return res.redirect('/reg');
 		}
 
@@ -59,17 +62,17 @@ module.exports = function(app) {
 			if (user)
 				err = 'Username already exists.';
 			if (err) {
-				req.flash('error', err);
+				req.session.error = err;
 				return res.redirect('/reg');
 			}
 
 			newUser.save(function(err) {
 				if (err) {
-					req.flash('error', err);
+					req.session.error = err;
 					return res.redirect('/reg');
 				}
 				req.session.user = newUser;
-				req.flash('success', '注册成功');
+				req.session.success = '注册成功';
 				res.redirect('/');
 			});
 		});
