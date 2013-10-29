@@ -60,7 +60,7 @@ module.exports = function(app) {
 
 		User.get(newUser.name, function(err, user) {
 			if (user)
-				err = 'Username already exists.';
+				err = 'Username already exists 用户已经存在!';
 			if (err) {
 				req.session.error = err;
 				return res.redirect('/reg');
