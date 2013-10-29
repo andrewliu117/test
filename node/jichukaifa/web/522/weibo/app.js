@@ -29,9 +29,6 @@ app.use(express.session({
         db: settings.db
     })
 }));
-app.use(app.router);
-//app.use(express.router(routes));
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function(req, res, next){
 	res.locals.user = req.session.user;
@@ -52,6 +49,11 @@ app.use(function(req, res, next){
 	// res.locals.success = req.session.success.length?req.session.success:null;
 	next();
 });
+
+app.use(app.router);
+//app.use(express.router(routes));
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 routes(app);
 
