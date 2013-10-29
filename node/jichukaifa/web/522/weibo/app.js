@@ -29,11 +29,31 @@ app.use(express.session({
         db: settings.db
     })
 }));
-app.use(app.router)
+app.use(app.router);
 //app.use(express.router(routes));
 app.use(express.static(path.join(__dirname, 'public')));
 
-routes(app)
+app.use(function(req, res, next){
+	res.locals.user = req.session.user;
+	var err = req.session.error;
+	if (err && err.length) {
+		res.locals.error = err;
+        console.log(res.locals.error);
+    } else
+		res.locals.error = null;
+
+	var succ = req.session.success;
+	if (succ && succ.length) {
+		res.locals.success = succ;
+        console.log(res.locals.success);
+    } else
+		res.locals.success = null;
+	// res.locals.error = req.session.error.length?req.session.error:null;
+	// res.locals.success = req.session.success.length?req.session.success:null;
+	next();
+});
+
+routes(app);
 
 // development only
 if ('development' == app.get('env')) {
@@ -55,22 +75,23 @@ http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
 
-app.dynamicHelpers({
-	user: function(req, res) {
-		return req.session.user;
-	},
-	error: function(req, res) {
-		var err = req.session.error;
-		if (err.length)
-			return err;
-		else
-			return null;
-	},
-	success: function(req, res) {
-		var succ = req.session.success;
-		if (succ.length)
-			return succ
-		else
-			return null;
-	},
-});
+// app.dynamicHelpers({
+// 	user: function(req, res) {
+// 		return req.session.user;
+// 	},
+// 	error: function(req, res) {
+// 		var err = req.session.error;
+// 		if (err.length)
+// 			return err;
+// 		else
+// 			return null;
+// 	},
+// 	success: function(req, res) {
+// 		var succ = req.session.success;
+// 		if (succ.length)
+// 			return succ
+// 		else
+// 			return null;
+// 	},
+// });
+

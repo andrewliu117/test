@@ -37,7 +37,7 @@ User.prototype.save = function save(cb) {
 };
 
 User.get = function get(username, cb) {
-    console.log(mongodb);
+    //console.log(mongodb);
     mongodb.open(function (err, db) {
         if (err) {
             return cb(err);

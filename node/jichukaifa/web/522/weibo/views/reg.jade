@@ -1,6 +1,11 @@
 extends layout
 
 block content
+    if success
+        div.alert.alert-success= success
+    if error
+        div.alert.alert-error= error
+        
     form.form-horizontal(method='post')
         fieldset
             legend 用户注册
