@@ -77,5 +77,36 @@ module.exports = function(app) {
 			});
 		});
 	});
+
+	app.get('/login', function(req, res) {
+		res.render('login',{
+			title:'用户登入',
+		});
+	});
+
+	app.post('/login', function(req, res) {
+		var md5 = crypto.createHash('md5');
+		var password = md5.update(req.body.password).digest('bash64');
+
+		User.get(req.body.username, function(err, user) {
+			if (!user) {
+				req.session.error = '用户不存在';
+				return res.redirect('/login');
+			}
+			if (user.password != password) {
+				req.session.error = '用户口令错误';
+			}
+
+			req.session.user = user;
+			req.session.success = '登入成功';
+			res.redirect('/');
+		});
+	});
+
+	app.get('/logout', function(req,res){
+		req.session.user = null;
+		req.session.success = '登出成功';
+		res.redirect('/');
+	})
 };
 
