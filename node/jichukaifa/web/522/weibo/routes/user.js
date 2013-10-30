@@ -43,6 +43,8 @@ User.get = function get(username, cb) {
             return cb(err);
         }
 
+        console.log(username);
+
         db.collection('users', function(err, collection) {
             if (err) {
                 mongodb.close();
@@ -53,6 +55,8 @@ User.get = function get(username, cb) {
                 mongodb.close();
                 if (doc) {
                     var user = new User(doc);
+                    console.log('find the user');
+                    console.log(user);
                     cb(err, user);
                 } else {
                     cb(err, null);
