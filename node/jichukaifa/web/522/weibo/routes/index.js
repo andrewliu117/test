@@ -5,7 +5,9 @@
 
 var crypto = require('crypto')
 
-var User = require('./user');
+var User = require('../models/user');
+var Post = require('../models/post')
+
 //exports.index = function(req, res){
 //  res.render('index', { title: 'Express' });
 //};
@@ -38,12 +40,14 @@ module.exports = function(app) {
         });
     });
 
+    app.get('/reg', checkNotLogin)
     app.get('/reg', function(req, res){
         res.render('reg', {
             title:'用户注册'
         });
     });
 
+    app.post('/reg', checkNotLogin);
 	app.post('/reg', function(req, res) {
 		req.session.error = null;
 		req.session.success = null;
@@ -88,6 +92,7 @@ module.exports = function(app) {
 		});
 	});
 
+	app.post('/login', checkNotLogin);
 	app.post('/login', function(req, res) {
 		req.session.error = null;
 		req.session.success = null;
@@ -104,12 +109,12 @@ module.exports = function(app) {
 				req.session.error = '用户不存在';
 				return res.redirect('/login');
 			}
-            console.log('-------------------------')
+            //console.log('-------------------------')
             //console.log(user.password.toString())
-            console.log(user.password)
-            console.log('-------------------------')
+            //console.log(user.password)
+            //console.log('-------------------------')
             //console.log(password.toString());
-            console.log(password);
+            //console.log(password);
 			if (user.password != password) {
 				req.session.error = '用户口令错误';
 				return res.redirect('/login');
@@ -121,11 +126,64 @@ module.exports = function(app) {
 		});
 	});
 
+	app.get('/logout', checkLogin)
 	app.get('/logout', function(req,res){
 		req.session.user = null;
         req.session.error = null;
 		req.session.success = '登出成功';
 		res.redirect('/');
 	})
+
+	app.post('/post', checkLogin);
+	app.post('/post', function(req, res) {
+		var currentUser = req.session.user;
+		var post = new Post(currentUser.name, req.body.post);
+		post.save(function(err) {
+			if (err) {
+				req.session.error = err;
+				return res.redirect('/');
+			}
+			req.session.success = 'post successfully!';
+			res.redirect('/u/' + currentUser.name);
+		});
+	});
+
+	app.get('/u/:user', function(req, res) {
+		User.get(req.params.user, function(err, user) {
+			if (!user) {
+				req.session.error = "user not exist";
+				return res.redirect('/');
+			}
+			Post.get(user.name, function(err, posts) {
+				if (err) {
+					req.session.error = err;
+					return res.redirect('/')
+				};
+				res.render('user', {
+					title: user.name,
+					posts: posts,
+				})
+			});
+		});
+	});
 };
 
+function checkLogin(req, res, next) {
+	req.session.error = null;
+    req.session.success = null;
+	if(!req.session.uer) {
+		req.session.error = 'Not login';
+		return res.redirect('login')
+	}
+	next();
+}
+
+function checkNotLogin(req, res, next) {
+	req.session.error = null;
+    req.session.success = null;
+	if (req.session.user) {
+		req.session.error = 'Already login';
+		return res.redirect('/')
+	}
+	next()
+}

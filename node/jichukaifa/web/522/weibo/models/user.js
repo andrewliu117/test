@@ -14,7 +14,7 @@ module.exports = User;
 User.prototype.save = function save(cb) {
     var user = {
         name: this.name,
-        password: this.password,
+        password: this.password.toString(),
     };
     mongodb.open(function(err, db) {
         if (err) {
@@ -54,6 +54,8 @@ User.get = function get(username, cb) {
             collection.findOne({name:username}, function(err, doc) {
                 mongodb.close();
                 if (doc) {
+                    console.log("lhj")
+                    console.dir(doc)
                     var user = new User(doc);
                     console.log('find the user');
                     console.log(user);
