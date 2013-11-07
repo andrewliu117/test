@@ -35,8 +35,14 @@ var Post = require('../models/post')
 
 module.exports = function(app) {
     app.get('/', function(req, res) {
-        res.render('index', {
-            title: '首页'
+        Post.get(null, function(err, posts) {
+            if (err) {
+                posts = []
+            }
+            res.render('index', {
+                title: '首页',
+                posts: posts,
+            });
         });
     });
 
@@ -98,7 +104,7 @@ module.exports = function(app) {
 		req.session.success = null;
 		var md5 = crypto.createHash('md5');
 		var password = md5.update(req.body.password).digest('base64');
-        console.log(req.body.password);
+        //console.log(req.body.password);
 
         //console.log(req.body.username);
 
@@ -138,6 +144,7 @@ module.exports = function(app) {
 	app.post('/post', function(req, res) {
 		var currentUser = req.session.user;
 		var post = new Post(currentUser.name, req.body.post);
+        //console.log(post)
 		post.save(function(err) {
 			if (err) {
 				req.session.error = err;
@@ -149,6 +156,7 @@ module.exports = function(app) {
 	});
 
 	app.get('/u/:user', function(req, res) {
+        //console.log('req.session.user = %s', req.session.user);
 		User.get(req.params.user, function(err, user) {
 			if (!user) {
 				req.session.error = "user not exist";
@@ -171,7 +179,7 @@ module.exports = function(app) {
 function checkLogin(req, res, next) {
 	req.session.error = null;
     req.session.success = null;
-	if(!req.session.uer) {
+	if(!req.session.user) {
 		req.session.error = 'Not login';
 		return res.redirect('login')
 	}

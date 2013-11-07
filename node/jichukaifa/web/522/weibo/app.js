@@ -39,14 +39,14 @@ app.use(function(req, res, next){
 	var err = req.session.error;
 	if (err && err.length) {
 		res.locals.error = err;
-        console.log(res.locals.error);
+        //console.log(res.locals.error);
     } else
 		res.locals.error = null;
 
 	var succ = req.session.success;
 	if (succ && succ.length) {
 		res.locals.success = succ;
-        console.log(res.locals.success);
+        //console.log(res.locals.success);
     } else
 		res.locals.success = null;
 	next();

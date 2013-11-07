@@ -43,7 +43,7 @@ User.get = function get(username, cb) {
             return cb(err);
         }
 
-        console.log(username);
+        //console.log(username);
 
         db.collection('users', function(err, collection) {
             if (err) {
@@ -54,11 +54,11 @@ User.get = function get(username, cb) {
             collection.findOne({name:username}, function(err, doc) {
                 mongodb.close();
                 if (doc) {
-                    console.log("lhj")
-                    console.dir(doc)
+                    //console.log("lhj")
+                    //console.dir(doc)
                     var user = new User(doc);
-                    console.log('find the user');
-                    console.log(user);
+                    //console.log('find the user');
+                    //console.log(user);
                     cb(err, user);
                 } else {
                     cb(err, null);
