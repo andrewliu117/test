@@ -5,7 +5,13 @@
   "scripts": {
     "start": "node app.js"
   },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "readme": "This my node js test",
   "dependencies": {
     "async": ">= 0.2.9",
+	"underscore": ">= 1.5.2"
   }
 }
