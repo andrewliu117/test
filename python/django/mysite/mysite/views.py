@@ -10,9 +10,11 @@ def current_datetime(request):
 	return HttpResponse(html)
 
 def hours_ahead(request, offset):
+	offset = int(offset);
 	now = datetime.datetime.now();
 	html = "<html><body> It's now %s.<br/>" % now
 	dt = datetime.datetime.new() + datetime.timedelta(hours=offset)
-	html += "In %s hours(s), it will be %s. </body></html>" % (offset, dt)
+	part2 = "In %s hours(s), it will be %s. </body></html>" % (offset, dt)
+	html += part2
 	return HttpResponse(html)
 
