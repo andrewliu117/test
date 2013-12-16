@@ -29,3 +29,8 @@
 	如果显示类似于以下的信息，表示安装成功。
 	>>> (1, 3, 0, 'final', 0)
 	```
+
+3.  Django开发中DJANGO\_SETTINGS\_MODULE is undefined解决方案
+
+http://javacrazyer.iteye.com/blog/1535323
+		
