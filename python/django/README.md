@@ -32,12 +32,13 @@
 
 3.  Django开发中DJANGO\_SETTINGS\_MODULE is undefined解决方案
 
-http://javacrazyer.iteye.com/blog/1535323
-解决方法1： 在代码中直接加入代码
-from django.conf import settings
-settings.configure()
+	http://javacrazyer.iteye.com/blog/1535323
 
-解决方法2：
-新增环境变量如下
-添加DJANGO\_SETTINGS\_MODULE 值为mysite.settings 
+	解决方法1： 在代码中直接加入代码
+	from django.conf import settings
+	settings.configure()
+
+	解决方法2：
+	新增环境变量如下
+	添加DJANGO\_SETTINGS\_MODULE 值为mysite.settings 
 		
